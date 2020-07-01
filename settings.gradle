@@ -1,0 +1,3 @@
+include ':anplayer-plugin'
+include ':app'
+rootProject.name = "Demo"
