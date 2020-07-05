@@ -6,6 +6,7 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.exception.NotImplemente
 import com.xeinebiu.anplayer.plugin.base.media.extractor.extractor.*
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Album
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Author
+import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Category
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.MediaTrack
 import java.net.CookieManager
 
@@ -69,6 +70,11 @@ abstract class MediaExtractor {
      */
     @Throws(NotImplementedExtractorException::class)
     abstract fun getSearchExtractor(): SearchExtractor
+
+    /**
+     * Returns collection of available categories
+     */
+    abstract fun getCategories(): List<Category>
 
     /**
      * Returns `true` if the given [uri] can be handled, `false` otherwise
