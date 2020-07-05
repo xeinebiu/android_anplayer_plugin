@@ -48,10 +48,10 @@ abstract class MediaExtractor {
     abstract fun getAuthorExtractor(author: Uri): AuthorExtractor
 
     /**
-     * Returns an instance of [CategoryExtractor]
+     * Returns an instance of [CategoryExtractor] for given [category]
      */
     @Throws(NotImplementedExtractorException::class)
-    abstract fun getCategoryExtractor(): CategoryExtractor
+    abstract fun getCategoryExtractor(category: Uri): CategoryExtractor
 
     /**
      * Returns an instance of [FeedExtractor]
