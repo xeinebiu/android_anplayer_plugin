@@ -12,7 +12,7 @@ abstract class AuthorExtractor(extractorCode: String) : ExtractorCodeDescriptor(
     /**
      * Returns the first page content of Albums
      */
-    abstract fun getFirstPAge(): List<AlbumCollection>
+    abstract fun getFirstPage(): List<AlbumCollection>
 
     /**
      * Returns the next page content of Albums
