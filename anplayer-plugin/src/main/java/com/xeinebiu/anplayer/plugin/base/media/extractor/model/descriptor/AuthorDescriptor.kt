@@ -11,7 +11,8 @@ open class AuthorDescriptor(
     mediumThumbnail: Uri,
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
-    uri: Uri
+    uri: Uri,
+    description: String
 ) : MediaDescriptor(
     extractorCode,
     id,
@@ -21,7 +22,8 @@ open class AuthorDescriptor(
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
-    uri
+    uri,
+    description
 ) {
     override val kind: String
         get() = AuthorDescriptor::class.java.simpleName

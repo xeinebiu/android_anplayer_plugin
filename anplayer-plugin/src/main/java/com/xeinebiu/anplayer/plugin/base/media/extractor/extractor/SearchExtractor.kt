@@ -13,7 +13,7 @@ abstract class SearchExtractor(extractorCode: String) : ExtractorCodeDescriptor(
     /**
      * Returns next page content
      */
-    abstract fun getNextPageResult(): List<MediaDescriptor>
+    abstract fun getNextPage(): List<MediaDescriptor>
 
     /**
      * Returns current query

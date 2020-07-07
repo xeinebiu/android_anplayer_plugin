@@ -12,6 +12,7 @@ open class AlbumDescriptor(
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
     uri: Uri,
+    description: String,
     val author: AuthorDescriptor
 ) : MediaDescriptor(
     extractorCode,
@@ -22,7 +23,8 @@ open class AlbumDescriptor(
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
-    uri
+    uri,
+    description
 ) {
     override val kind: String
         get() = AlbumDescriptor::class.java.simpleName

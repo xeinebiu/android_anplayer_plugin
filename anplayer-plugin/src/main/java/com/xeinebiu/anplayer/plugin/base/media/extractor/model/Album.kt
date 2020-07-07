@@ -15,7 +15,7 @@ class Album(
     thumbnails: List<Uri>,
     uri: Uri,
     authorDescriptor: AuthorDescriptor,
-    val description: String,
+    description: String,
     val tracksCount: Int
 ) : AlbumDescriptor(
     extractorCode,
@@ -27,6 +27,7 @@ class Album(
     smallThumbnail,
     thumbnails,
     uri,
+    description,
     authorDescriptor
 ) {
     override val kind: String

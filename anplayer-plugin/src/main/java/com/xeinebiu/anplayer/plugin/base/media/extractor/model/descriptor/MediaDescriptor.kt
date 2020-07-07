@@ -18,7 +18,8 @@ abstract class MediaDescriptor(
     val mediumThumbnail: Uri,
     val smallThumbnail: Uri,
     val thumbnails: List<Uri>,
-    val uri: Uri
+    val uri: Uri,
+    val description: String
 ) : ExtractorCodeDescriptor(extractorCode) {
 
     abstract val kind: String

@@ -13,9 +13,9 @@ class Author(
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
     uri: Uri,
+    description: String,
     val bannerThumbnails: List<Uri>,
-    val keywords: List<String>,
-    val description: String
+    val keywords: List<String>
 ) : AuthorDescriptor(
     extractorCode,
     id,
@@ -25,7 +25,8 @@ class Author(
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
-    uri
+    uri,
+    description
 ) {
     override val kind: String
         get() = Author::class.java.simpleName

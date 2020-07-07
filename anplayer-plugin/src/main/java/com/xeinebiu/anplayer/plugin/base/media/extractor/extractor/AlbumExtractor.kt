@@ -17,12 +17,12 @@ abstract class AlbumExtractor(extractorCode: String) : ExtractorCodeDescriptor(e
     /**
      * Returns the first page content of tracks
      */
-    abstract fun getContentsFirstPage(): List<MediaDescriptor>
+    abstract fun getFirstPage(): List<MediaDescriptor>
 
     /**
      * Returns next page content of tracks
      */
-    abstract fun getContentsNextPage(): List<MediaDescriptor>
+    abstract fun getNextPage(): List<MediaDescriptor>
 
     /**
      * Returns `true` if there is a next page available of tracks, `false` otherwise

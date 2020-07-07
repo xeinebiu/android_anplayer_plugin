@@ -35,9 +35,9 @@ class MediaTrack(
     smallThumbnail,
     thumbnails,
     uri,
+    description,
     authorDescriptor,
-    durationText,
-    description
+    durationText
 ) {
     override val kind: String
         get() = MediaTrack::class.java.simpleName
