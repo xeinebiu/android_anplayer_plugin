@@ -9,25 +9,25 @@ class Album(
     id: String,
     endpoint: String,
     name: String,
+    description: String,
     largeThumbnail: Uri,
     mediumThumbnail: Uri,
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
     uri: Uri,
     authorDescriptor: AuthorDescriptor,
-    description: String,
     val tracksCount: Int
 ) : AlbumDescriptor(
     extractorCode,
     id,
     endpoint,
     name,
+    description,
     largeThumbnail,
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
     uri,
-    description,
     authorDescriptor
 ) {
     override val kind: String

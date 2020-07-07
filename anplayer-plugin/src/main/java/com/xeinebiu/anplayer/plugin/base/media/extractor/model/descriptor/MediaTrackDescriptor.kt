@@ -7,12 +7,12 @@ open class MediaTrackDescriptor(
     id: String,
     endpoint: String,
     name: String,
+    description: String,
     largeThumbnail: Uri,
     mediumThumbnail: Uri,
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
     uri: Uri,
-    description: String,
     val author: AuthorDescriptor,
     val durationText: String
 ) : MediaDescriptor(
@@ -20,12 +20,12 @@ open class MediaTrackDescriptor(
     id,
     endpoint,
     name,
+    description,
     largeThumbnail,
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
-    uri,
-    description
+    uri
 ) {
     override val kind: String
         get() = MediaTrackDescriptor::class.java.simpleName

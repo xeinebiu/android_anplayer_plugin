@@ -7,23 +7,23 @@ open class AuthorDescriptor(
     id: String,
     endpoint: String,
     name: String,
+    description: String,
     largeThumbnail: Uri,
     mediumThumbnail: Uri,
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
-    uri: Uri,
-    description: String
+    uri: Uri
 ) : MediaDescriptor(
     extractorCode,
     id,
     endpoint,
     name,
+    description,
     largeThumbnail,
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
-    uri,
-    description
+    uri
 ) {
     override val kind: String
         get() = AuthorDescriptor::class.java.simpleName

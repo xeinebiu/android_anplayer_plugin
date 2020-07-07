@@ -8,12 +8,12 @@ class Author(
     id: String,
     endpoint: String,
     name: String,
+    description: String,
     largeThumbnail: Uri,
     mediumThumbnail: Uri,
     smallThumbnail: Uri,
     thumbnails: List<Uri>,
     uri: Uri,
-    description: String,
     val bannerThumbnails: List<Uri>,
     val keywords: List<String>
 ) : AuthorDescriptor(
@@ -21,12 +21,12 @@ class Author(
     id,
     endpoint,
     name,
+    description,
     largeThumbnail,
     mediumThumbnail,
     smallThumbnail,
     thumbnails,
-    uri,
-    description
+    uri
 ) {
     override val kind: String
         get() = Author::class.java.simpleName
