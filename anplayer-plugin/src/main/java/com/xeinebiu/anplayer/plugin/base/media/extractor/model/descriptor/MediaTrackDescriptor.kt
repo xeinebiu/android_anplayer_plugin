@@ -13,7 +13,8 @@ open class MediaTrackDescriptor(
     thumbnails: List<Uri>,
     uri: Uri,
     val author: AuthorDescriptor,
-    val durationText: String
+    val durationText: String,
+    val description: String
 ) : MediaDescriptor(
     extractorCode,
     id,

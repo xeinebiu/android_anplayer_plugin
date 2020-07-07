@@ -16,7 +16,7 @@ class MediaTrack(
     uri: Uri,
     authorDescriptor: AuthorDescriptor,
     durationText: String,
-    val description: String,
+    description: String,
     val genre: String,
     val keywords: List<String>,
     val publishedDate: String,
@@ -36,7 +36,8 @@ class MediaTrack(
     thumbnails,
     uri,
     authorDescriptor,
-    durationText
+    durationText,
+    description
 ) {
     override val kind: String
         get() = MediaTrack::class.java.simpleName
