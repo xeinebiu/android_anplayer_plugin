@@ -3,7 +3,7 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor
 import android.net.Uri
 
 /**
- * Is the base model for
+ * Represents the base model for
  *
  *  * Album
  *  * Author
@@ -15,10 +15,9 @@ abstract class MediaDescriptor(
     val endpoint: String,
     val name: String,
     val description: String,
-    val largeThumbnail: Uri,
-    val mediumThumbnail: Uri,
     val smallThumbnail: Uri,
-    val thumbnails: List<Uri>,
+    val mediumThumbnail: Uri,
+    val largeThumbnail: Uri,
     val uri: Uri
 ) : ExtractorCodeDescriptor(extractorCode) {
 

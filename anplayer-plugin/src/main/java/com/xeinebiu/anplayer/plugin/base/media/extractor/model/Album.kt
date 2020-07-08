@@ -10,10 +10,9 @@ class Album(
     endpoint: String,
     name: String,
     description: String,
-    largeThumbnail: Uri,
-    mediumThumbnail: Uri,
     smallThumbnail: Uri,
-    thumbnails: List<Uri>,
+    mediumThumbnail: Uri,
+    largeThumbnail: Uri,
     uri: Uri,
     authorDescriptor: AuthorDescriptor,
     val tracksCount: Int
@@ -23,10 +22,9 @@ class Album(
     endpoint,
     name,
     description,
-    largeThumbnail,
-    mediumThumbnail,
     smallThumbnail,
-    thumbnails,
+    mediumThumbnail,
+    largeThumbnail,
     uri,
     authorDescriptor
 ) {

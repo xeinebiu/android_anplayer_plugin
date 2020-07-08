@@ -8,10 +8,9 @@ open class AuthorDescriptor(
     endpoint: String,
     name: String,
     description: String,
-    largeThumbnail: Uri,
-    mediumThumbnail: Uri,
     smallThumbnail: Uri,
-    thumbnails: List<Uri>,
+    mediumThumbnail: Uri,
+    largeThumbnail: Uri,
     uri: Uri
 ) : MediaDescriptor(
     extractorCode,
@@ -19,10 +18,9 @@ open class AuthorDescriptor(
     endpoint,
     name,
     description,
-    largeThumbnail,
-    mediumThumbnail,
     smallThumbnail,
-    thumbnails,
+    mediumThumbnail,
+    largeThumbnail,
     uri
 ) {
     override val kind: String

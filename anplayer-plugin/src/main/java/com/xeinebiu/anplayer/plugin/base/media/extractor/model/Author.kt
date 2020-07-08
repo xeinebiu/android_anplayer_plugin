@@ -9,10 +9,9 @@ class Author(
     endpoint: String,
     name: String,
     description: String,
-    largeThumbnail: Uri,
-    mediumThumbnail: Uri,
     smallThumbnail: Uri,
-    thumbnails: List<Uri>,
+    mediumThumbnail: Uri,
+    largeThumbnail: Uri,
     uri: Uri,
     val bannerThumbnails: List<Uri>,
     val keywords: List<String>
@@ -22,10 +21,9 @@ class Author(
     endpoint,
     name,
     description,
-    largeThumbnail,
-    mediumThumbnail,
     smallThumbnail,
-    thumbnails,
+    mediumThumbnail,
+    largeThumbnail,
     uri
 ) {
     override val kind: String

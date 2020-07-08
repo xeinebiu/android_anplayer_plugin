@@ -8,10 +8,9 @@ open class AlbumDescriptor(
     endpoint: String,
     name: String,
     description: String,
-    largeThumbnail: Uri,
-    mediumThumbnail: Uri,
     smallThumbnail: Uri,
-    thumbnails: List<Uri>,
+    mediumThumbnail: Uri,
+    largeThumbnail: Uri,
     uri: Uri,
     val author: AuthorDescriptor
 ) : MediaDescriptor(
@@ -20,10 +19,9 @@ open class AlbumDescriptor(
     endpoint,
     name,
     description,
-    largeThumbnail,
-    mediumThumbnail,
     smallThumbnail,
-    thumbnails,
+    mediumThumbnail,
+    largeThumbnail,
     uri
 ) {
     override val kind: String
