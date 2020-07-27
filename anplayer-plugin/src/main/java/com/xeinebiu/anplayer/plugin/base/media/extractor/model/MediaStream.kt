@@ -88,19 +88,25 @@ class MediaStream(
          * @param resolution Video resolution from 144p to 8K
          * @return Constant value of quality
          */
-        fun getQualityFromResolution(resolution: String): Int =
-            when {
-                resolution.contains("144p") -> QUALITY_VIDEO_EXTRA_LOW
-                resolution.contains("240p") -> QUALITY_VIDEO_LOW
-                resolution.contains("360p") -> QUALITY_VIDEO_MEDIUM
-                resolution.contains("480p") -> QUALITY_VIDEO_HQ
-                resolution.contains("720p") -> QUALITY_VIDEO_HD
-                resolution.contains("1080p") -> QUALITY_VIDEO_FULL_HD
-                resolution.contains("1440p") -> QUALITY_VIDEO_2K
-                resolution.contains("2160p") -> QUALITY_VIDEO_4K
-                resolution.contains("4320p") -> QUALITY_VIDEO_8K
+        fun getQualityFromResolution(resolution: String): Int {
+            val height = if (resolution.contains("x", true))
+                resolution.toLowerCase().split("x")[1].filter { it.isDigit() }.toInt()
+            else
+                resolution.filter { it.isDigit() }.toInt()
+
+            return when {
+                height <= QUALITY_VIDEO_EXTRA_LOW -> QUALITY_VIDEO_EXTRA_LOW
+                height <= QUALITY_VIDEO_LOW -> QUALITY_VIDEO_LOW
+                height <= QUALITY_VIDEO_MEDIUM -> QUALITY_VIDEO_MEDIUM
+                height <= QUALITY_VIDEO_HQ -> QUALITY_VIDEO_HQ
+                height <= QUALITY_VIDEO_HD -> QUALITY_VIDEO_HD
+                height <= QUALITY_VIDEO_FULL_HD -> QUALITY_VIDEO_FULL_HD
+                height <= QUALITY_VIDEO_2K -> QUALITY_VIDEO_2K
+                height <= QUALITY_VIDEO_4K -> QUALITY_VIDEO_4K
+                height <= QUALITY_VIDEO_8K -> QUALITY_VIDEO_8K
+                height <= QUALITY_VIDEO_EXTRA_LOW -> QUALITY_VIDEO_EXTRA_LOW
                 else -> QUALITY_VIDEO_UNDEFINED
             }
-
+        }
     }
 }
