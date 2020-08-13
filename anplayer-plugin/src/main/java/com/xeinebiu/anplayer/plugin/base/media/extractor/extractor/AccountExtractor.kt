@@ -2,13 +2,13 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.extractor
 
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AlbumDescriptor
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AuthorDescriptor
-import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.ExtractorCodeDescriptor
+import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaDescriptor
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaTrackDescriptor
 
 /**
  * Extractor for current authenticated account
  */
-abstract class AccountExtractor(extractorCode: String) : ExtractorCodeDescriptor(extractorCode) {
+abstract class AccountExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode) {
 
     /**
      * Returns first page content of following authors
