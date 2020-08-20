@@ -15,7 +15,7 @@ abstract class MediaTrackExtractor(extractorCode: String) :
     /**
      * Returns default stream
      */
-    abstract fun getStream(): MediaStream
+    abstract fun getStream(): MediaStream?
 
     /**
      * Returns a collection of streams that contains Audio Only

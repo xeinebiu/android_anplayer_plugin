@@ -7,7 +7,6 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaD
  * Extractor for a single Album
  */
 abstract class AlbumExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode) {
-
     /**
      * Returns the album
      */
