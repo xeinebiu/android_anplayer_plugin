@@ -13,19 +13,9 @@ abstract class MediaTrackExtractor(extractorCode: String) :
     Extractor<MediaTrackDescriptor>(extractorCode) {
 
     /**
-     * Returns a single audio stream
+     * Returns default stream
      */
-    abstract fun getSingleAudioStream(): MediaStream?
-
-    /**
-     * Returns a single video & audio stream
-     */
-    abstract fun getSingleMixedStream(): MediaStream?
-
-    /**
-     * Returns a single video only stream
-     */
-    abstract fun getSingleVideoOnlyStream(): MediaStream?
+    abstract fun getStream(): MediaStream
 
     /**
      * Returns a collection of streams that contains Audio Only
