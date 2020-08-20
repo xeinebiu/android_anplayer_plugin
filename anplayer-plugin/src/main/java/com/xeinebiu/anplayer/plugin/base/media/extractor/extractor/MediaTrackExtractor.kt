@@ -13,11 +13,6 @@ abstract class MediaTrackExtractor(extractorCode: String) :
     Extractor<MediaTrackDescriptor>(extractorCode) {
 
     /**
-     * Returns default stream
-     */
-    abstract fun getStream(): MediaStream?
-
-    /**
      * Returns a collection of streams that contains Audio Only
      */
     abstract fun getAudioOnlyStreams(): List<MediaStream>
