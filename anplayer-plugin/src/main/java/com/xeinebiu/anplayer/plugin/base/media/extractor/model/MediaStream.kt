@@ -5,15 +5,17 @@ import androidx.annotation.IntDef
 import com.xeinebiu.anplayer.plugin.base.media.extractor.enum.MediaFormat
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.ExtractorCodeDescriptor
 
-class MediaStream(
+open class MediaStream(
     extractorCode: String,
-    val format: MediaFormat,
-    val resolution: String,
-    @get:MediaStream.MediaQuality val quality: Int,
-    val size: Long,
     @get:MediaStream.MediaStreamType val streamType: Int,
     val uri: Uri
 ) : ExtractorCodeDescriptor(extractorCode) {
+    open val format: MediaFormat? = null
+    open val resolution: String? = null
+    open val size: Long? = null
+
+    @get:MediaStream.MediaQuality
+    open val quality: Int? = null
 
     @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(

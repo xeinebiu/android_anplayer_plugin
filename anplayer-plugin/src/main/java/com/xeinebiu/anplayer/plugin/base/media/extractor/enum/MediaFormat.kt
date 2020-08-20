@@ -42,5 +42,4 @@ enum class MediaFormat(val id: Int, val _name: String, val suffix: String, val m
             throw NotSupportedMediaFormatException(name)
         }
     }
-
 }
