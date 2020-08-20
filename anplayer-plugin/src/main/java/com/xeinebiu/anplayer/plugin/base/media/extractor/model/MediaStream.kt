@@ -7,7 +7,8 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.Extrac
 
 open class MediaStream(
     extractorCode: String,
-    @get:MediaStream.MediaStreamType val streamType: Int,
+    @get:MediaStream.MediaContent val mediaContent: Int,
+    @get:MediaStream.MediaType val mediaType: Int,
     val uri: Uri
 ) : ExtractorCodeDescriptor(extractorCode) {
     open val format: MediaFormat? = null
@@ -39,11 +40,19 @@ open class MediaStream(
 
     @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(
-        TYPE_MUSIC,
-        TYPE_MUSIC_VIDEO,
-        TYPE_VIDEO
+        CONTENT_MUSIC,
+        CONTENT_MUSIC_VIDEO,
+        CONTENT_VIDEO
     )
-    annotation class MediaStreamType
+    annotation class MediaContent
+
+    @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
+    @IntDef(
+        TYPE_PROGRESSIVE,
+        TYPE_HLS,
+        TYPE_DASH
+    )
+    annotation class MediaType
 
     companion object {
         const val AUDIO_RESOLUTION = "0p"
@@ -64,9 +73,13 @@ open class MediaStream(
         const val QUALITY_VIDEO_4K = 4320
         const val QUALITY_VIDEO_8K = 8640
 
-        const val TYPE_MUSIC = 0
-        const val TYPE_VIDEO = 1
-        const val TYPE_MUSIC_VIDEO = 2
+        const val CONTENT_MUSIC = 0
+        const val CONTENT_VIDEO = 1
+        const val CONTENT_MUSIC_VIDEO = 2
+
+        const val TYPE_PROGRESSIVE = 0
+        const val TYPE_HLS = 1
+        const val TYPE_DASH = 2
 
         /**
          * Get audio quality constant from given bitrate
