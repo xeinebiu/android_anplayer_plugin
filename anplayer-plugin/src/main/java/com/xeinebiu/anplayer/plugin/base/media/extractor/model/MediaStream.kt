@@ -15,6 +15,8 @@ open class MediaStream(
     @get:MediaStream.MediaQuality
     open val quality: Int? = null
 
+    open val headers: Map<String, String>? = null
+
     @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(
         QUALITY_VIDEO_EXTRA_LOW,
