@@ -26,7 +26,7 @@ abstract class MediaExtractor {
     /**
      * Initialize extractor
      */
-    abstract fun init(cookieManager: CookieManager?, data: HashMap<String, String>?)
+    abstract fun init(cookieManager: CookieManager?, data: Map<String, String>?)
 
     /**
      * Returns an instance of [AccountExtractor] if the client is authenticated,
