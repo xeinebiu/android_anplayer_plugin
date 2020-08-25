@@ -7,13 +7,10 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.Extrac
 
 open class MediaStream(
     extractorCode: String,
-    @get:MediaStream.MediaContent val mediaContent: Int,
     @get:MediaStream.MediaType val mediaType: Int,
     val uri: Uri
 ) : ExtractorCodeDescriptor(extractorCode) {
     open val format: MediaFormat? = null
-    open val resolution: String? = null
-    open val size: Long? = null
 
     @get:MediaStream.MediaQuality
     open val quality: Int? = null
@@ -37,14 +34,6 @@ open class MediaStream(
         QUALITY_AUDIO_EXTRA_HIGH
     )
     annotation class MediaQuality
-
-    @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
-    @IntDef(
-        CONTENT_MUSIC,
-        CONTENT_MUSIC_VIDEO,
-        CONTENT_VIDEO
-    )
-    annotation class MediaContent
 
     @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(
