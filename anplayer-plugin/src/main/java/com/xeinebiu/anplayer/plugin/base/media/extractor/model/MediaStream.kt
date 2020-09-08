@@ -39,6 +39,7 @@ open class MediaStream(
 
     @kotlin.annotation.Retention(AnnotationRetention.SOURCE)
     @IntDef(
+        TYPE_UNKNOWN,
         TYPE_PROGRESSIVE,
         TYPE_HLS,
         TYPE_DASH
@@ -68,9 +69,10 @@ open class MediaStream(
         const val CONTENT_VIDEO = 1
         const val CONTENT_MUSIC_VIDEO = 2
 
-        const val TYPE_PROGRESSIVE = 0
-        const val TYPE_HLS = 1
-        const val TYPE_DASH = 2
+        const val TYPE_UNKNOWN = 0
+        const val TYPE_PROGRESSIVE = 1
+        const val TYPE_HLS = 2
+        const val TYPE_DASH = 3
 
         /**
          * Get audio quality constant from given bitrate
