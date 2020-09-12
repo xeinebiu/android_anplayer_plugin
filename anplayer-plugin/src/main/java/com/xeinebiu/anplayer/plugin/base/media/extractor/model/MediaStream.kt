@@ -7,6 +7,6 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.Extrac
 open class MediaStream(
     extractorCode: String,
     val uri: Uri,
-    val headers: Map<String, String>? = null
+    val headers: Map<String, String>?
 ) : ExtractorCodeDescriptor(extractorCode)
 
