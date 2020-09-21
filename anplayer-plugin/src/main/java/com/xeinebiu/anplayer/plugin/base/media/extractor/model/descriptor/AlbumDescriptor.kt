@@ -12,7 +12,7 @@ open class AlbumDescriptor(
     mediumThumbnail: Uri,
     largeThumbnail: Uri,
     uri: Uri,
-    val author: AuthorDescriptor
+    val author: AuthorDescriptor?
 ) : MediaDescriptor(
     extractorCode,
     id,

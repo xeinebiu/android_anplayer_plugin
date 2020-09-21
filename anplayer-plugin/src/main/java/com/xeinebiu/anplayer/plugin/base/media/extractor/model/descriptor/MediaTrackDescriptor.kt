@@ -12,7 +12,7 @@ open class MediaTrackDescriptor(
     mediumThumbnail: Uri,
     largeThumbnail: Uri,
     uri: Uri,
-    val author: AuthorDescriptor,
+    val author: AuthorDescriptor?,
     val durationText: String,
     val isVideo: Boolean
 ) : MediaDescriptor(

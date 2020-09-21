@@ -9,5 +9,5 @@ class Comment(
     val publishedTime: String,
     val text: String,
     val thumbsUp: Int,
-    val author: AuthorDescriptor
+    val author: AuthorDescriptor?
 ) : ExtractorCodeDescriptor(extractorCode)

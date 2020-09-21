@@ -14,7 +14,7 @@ class Album(
     mediumThumbnail: Uri,
     largeThumbnail: Uri,
     uri: Uri,
-    authorDescriptor: AuthorDescriptor,
+    authorDescriptor: AuthorDescriptor?,
     val tracksCount: Int
 ) : AlbumDescriptor(
     extractorCode,

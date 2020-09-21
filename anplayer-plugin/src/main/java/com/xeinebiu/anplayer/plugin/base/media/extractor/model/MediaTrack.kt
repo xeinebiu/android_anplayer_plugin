@@ -14,7 +14,7 @@ class MediaTrack(
     mediumThumbnail: Uri,
     largeThumbnail: Uri,
     uri: Uri,
-    authorDescriptor: AuthorDescriptor,
+    authorDescriptor: AuthorDescriptor?,
     durationText: String,
     isVideo: Boolean,
     val genre: String,
