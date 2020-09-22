@@ -25,7 +25,7 @@ abstract class AccountExtractor(extractorCode: String) : Extractor<MediaDescript
     /**
      * Returns extractor for following authors
      */
-    abstract fun getFollowingAuthorsExtractor(): AccountFollowingAuthorsExtractor
+    abstract fun getFollowingExtractor(): AccountFollowingAuthorsExtractor
 
     /**
      * Returns account history extractor
@@ -35,10 +35,10 @@ abstract class AccountExtractor(extractorCode: String) : Extractor<MediaDescript
     /**
      * Returns account albums extractor
      */
-    abstract fun getSavedAlbumsExtractor(): AccountAlbumsExtractor
+    abstract fun getAlbumsExtractor(): AccountAlbumsExtractor
 
     /**
      * Returns subscribed tracks extractor
      */
-    abstract fun getSubscribedTracks(): AccountSubscribedTracksExtractor
+    abstract fun getSubscribedTracksExtractor(): AccountSubscribedTracksExtractor
 }
