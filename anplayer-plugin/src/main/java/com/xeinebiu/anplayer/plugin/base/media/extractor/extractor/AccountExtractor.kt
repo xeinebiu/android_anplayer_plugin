@@ -5,68 +5,40 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.Author
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaDescriptor
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaTrackDescriptor
 
+abstract class AccountFollowingAuthorsExtractor(extractorCode: String) :
+    Extractor<AuthorDescriptor>(extractorCode)
+
+abstract class AccountHistoryExtractor(extractorCode: String) :
+    Extractor<MediaDescriptor>(extractorCode)
+
+abstract class AccountAlbumsExtractor(extractorCode: String) :
+    Extractor<AlbumDescriptor>(extractorCode)
+
+abstract class AccountSubscribedTracksExtractor(extractorCode: String) :
+    Extractor<MediaTrackDescriptor>(extractorCode)
+
 /**
  * Extractor for current authenticated account
  */
 abstract class AccountExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode) {
 
     /**
-     * Returns first page content of following authors
+     * Returns extractor for following authors
      */
-    abstract fun getFollowingAuthorsFirstPage(): List<AuthorDescriptor>
+    abstract fun getFollowingAuthorsExtractor(): AccountFollowingAuthorsExtractor
 
     /**
-     * Returns next page content of following authors
+     * Returns account history extractor
      */
-    abstract fun getFollowingAuthorsNextPage(): List<AuthorDescriptor>
+    abstract fun getHistoryExtractor(): AccountHistoryExtractor
 
     /**
-     * Returns first page content of tracks history
+     * Returns account albums extractor
      */
-    abstract fun getHistoryTracksFirstPage(): List<MediaTrackDescriptor>
+    abstract fun getSavedAlbumsExtractor(): AccountAlbumsExtractor
 
     /**
-     * Returns next page content of tracks history
+     * Returns subscribed tracks extractor
      */
-    abstract fun getHistoryTracksNextPage(): List<MediaTrackDescriptor>
-
-    /**
-     * Returns first page content of saved albums
-     */
-    abstract fun getSavedAlbumsFirstPage(): List<AlbumDescriptor>
-
-    /**
-     * Returns next page content of saved albums
-     */
-    abstract fun getSavedAlbumsNextPage(): List<AlbumDescriptor>
-
-    /**
-     * Returns first page content of subscribed tracks
-     */
-    abstract fun getSubscribedTracksFirstPage(): List<MediaTrackDescriptor>
-
-    /**
-     * Returns next page content of subscribed tracks
-     */
-    abstract fun getSubscribedTracksNextPage(): List<MediaTrackDescriptor>
-
-    /**
-     * Returns `true` if there is a next page available of subscribed|following authors, `false` otherwise
-     */
-    abstract fun hasFollowingAuthorsNextPage(): Boolean
-
-    /**
-     * Returns `true` if there is a next page available of history tracks, `false` otherwise
-     */
-    abstract fun hasHistoryTracksNextPage(): Boolean
-
-    /**
-     * Returns `true` if there is a next page available of saved albums, `false` otherwise
-     */
-    abstract fun hasSavedAlbumsNextPage(): Boolean
-
-    /**
-     * Returns `true` if there is a next page available of subscribed tracks, `false` otherwise
-     */
-    abstract fun hasSubscribedTracksNextPage(): Boolean
+    abstract fun getSubscribedTracks(): AccountSubscribedTracksExtractor
 }

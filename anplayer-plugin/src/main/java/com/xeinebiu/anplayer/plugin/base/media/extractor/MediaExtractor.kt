@@ -72,12 +72,6 @@ abstract class MediaExtractor {
     abstract fun getSearchExtractor(): SearchExtractor
 
     /**
-     * Returns an instance of [MediaCollectionExtractor]
-     */
-    @Throws(NotImplementedExtractorException::class)
-    abstract fun getMediaCollectionExtractor(uri: Uri): MediaCollectionExtractor
-
-    /**
      * Returns collection of available categories
      */
     abstract fun getCategories(): List<Category>
