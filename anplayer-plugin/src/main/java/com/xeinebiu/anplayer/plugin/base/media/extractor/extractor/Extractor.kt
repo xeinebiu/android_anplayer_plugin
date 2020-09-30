@@ -4,7 +4,7 @@ abstract class Extractor<T>(val extractorCode: String) {
     /**
      * Reset the cursor
      */
-    abstract fun reset(): List<T>
+    abstract fun reset()
 
     /**
      * Returns next page content
