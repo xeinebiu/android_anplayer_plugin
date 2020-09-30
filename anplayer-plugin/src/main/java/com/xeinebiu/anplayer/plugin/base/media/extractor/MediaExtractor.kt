@@ -72,7 +72,13 @@ abstract class MediaExtractor {
      * Returns an instance of [SearchExtractor]
      */
     @Throws(NotImplementedExtractorException::class)
-    abstract fun getSearchExtractor(): SearchExtractor
+    abstract fun getSearchExtractor(query: String): SearchExtractor
+
+    /**
+     * Returns an instance of [AutoCompleteExtractor]
+     */
+    @Throws(NotImplementedExtractorException::class)
+    abstract fun getAutoCompleteExtractor(query: String): AutoCompleteExtractor
 
     /**
      * Returns collection of available categories

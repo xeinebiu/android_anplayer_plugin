@@ -1,11 +1,9 @@
 package com.xeinebiu.anplayer.plugin.base.media.extractor.extractor
 
-import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaDescriptor
-
 /**
  * Extractor to handle queries
  */
-abstract class SearchExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode) {
+abstract class AutoCompleteExtractor(extractorCode: String) : Extractor<String>(extractorCode) {
     /**
      * Returns current query
      */
