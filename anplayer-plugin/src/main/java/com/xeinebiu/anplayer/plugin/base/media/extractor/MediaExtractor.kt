@@ -8,6 +8,7 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Album
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Author
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Category
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.MediaTrack
+import java.io.File
 import java.net.CookieManager
 
 /**
@@ -16,12 +17,14 @@ import java.net.CookieManager
  * Provides a collection (set) of extractors
  */
 abstract class MediaExtractor {
-
-    @JvmField
-    var mExtractorCode = ""
+    private var mExtractorCode = ""
+    private lateinit var mTempFolder: File
 
     val extractorCode: String
         get() = mExtractorCode
+
+    val tempFolder: File
+        get() = mTempFolder
 
     /**
      * Initialize extractor
