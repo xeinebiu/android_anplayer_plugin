@@ -5,7 +5,6 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AlbumD
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AuthorDescriptor
 
 class Album(
-    extractorCode: String,
     id: String,
     endpoint: String,
     name: String,
@@ -17,7 +16,6 @@ class Album(
     authorDescriptor: AuthorDescriptor?,
     val tracksCount: Int
 ) : AlbumDescriptor(
-    extractorCode,
     id,
     endpoint,
     name,

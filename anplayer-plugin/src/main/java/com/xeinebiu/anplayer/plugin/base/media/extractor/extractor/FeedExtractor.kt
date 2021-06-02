@@ -3,6 +3,6 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.extractor
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaDescriptor
 
 /**
- * Extractor for Home
+ * Extractor for Feeds
  */
-abstract class FeedExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode)
+abstract class FeedExtractor : Extractor<MediaDescriptor>()

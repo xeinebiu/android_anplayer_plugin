@@ -1,5 +1,6 @@
 package com.xeinebiu.anplayer.plugin.base.media.extractor.exception
 
-class NotAuthenticatedServiceException(
+abstract class MediaExtractorException(
+    message: String,
     cause: Throwable?
-) : MediaExtractorException("", cause)
+) : Exception(message, cause)

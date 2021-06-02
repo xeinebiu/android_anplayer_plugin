@@ -3,7 +3,6 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor
 import android.net.Uri
 
 open class AuthorDescriptor(
-    extractorCode: String,
     id: String,
     endpoint: String,
     name: String,
@@ -13,7 +12,6 @@ open class AuthorDescriptor(
     largeThumbnail: Uri,
     uri: Uri
 ) : MediaDescriptor(
-    extractorCode,
     id,
     endpoint,
     name,

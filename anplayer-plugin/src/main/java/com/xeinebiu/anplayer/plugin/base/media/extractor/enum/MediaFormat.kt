@@ -1,12 +1,14 @@
 package com.xeinebiu.anplayer.plugin.base.media.extractor.enum
 
-import com.xeinebiu.anplayer.plugin.base.media.extractor.exception.NotSupportedMediaFormatException
-import com.xeinebiu.anplayer.plugin.base.media.extractor.exception.NotSupportedMimeTypeException
-
 /**
  * Specifies the Format of specific Media Content
  */
-enum class MediaFormat(val id: Int, val _name: String, val suffix: String, val mimeType: String) {
+enum class MediaFormat(
+    val id: Int,
+    val _name: String,
+    val suffix: String,
+    val mimeType: String
+) {
     MPEG_4(0x0, "MPEG-4", "mp4", "video/mp4"),
     V3GPP(0x10, "3GPP", "3gp", "video/3gpp"),
     WEBM(0x20, "WebM", "webm", "video/webm"),
@@ -28,18 +30,10 @@ enum class MediaFormat(val id: Int, val _name: String, val suffix: String, val m
     SRT(0x6000, "SubRip file format", "srt", "text/srt");
 
     companion object {
-        fun getByMimeType(mimeType: String?): MediaFormat {
-            for (vf in values())
-                if (vf.mimeType == mimeType) return vf
 
-            throw NotSupportedMimeTypeException(mimeType)
-        }
+        fun getByMimeType(mimeType: String?): MediaFormat? =
+            values().find { it.mimeType == mimeType }
 
-        fun getByName(name: String): MediaFormat {
-            for (vf in values())
-                if (vf._name == name) return vf
-
-            throw NotSupportedMediaFormatException(name)
-        }
+        fun getByName(name: String): MediaFormat? = values().find { it._name == name }
     }
 }

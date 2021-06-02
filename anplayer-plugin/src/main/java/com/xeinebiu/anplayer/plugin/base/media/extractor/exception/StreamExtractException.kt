@@ -1,4 +1,8 @@
 package com.xeinebiu.anplayer.plugin.base.media.extractor.exception
 
-class StreamExtractException(message: String?, extractorCode: String) :
-    BaseException(message, extractorCode)
+import android.net.Uri
+
+class StreamExtractException(
+    mediaTrack: Uri,
+    cause: Throwable?
+) : Exception(mediaTrack.toString(), cause)

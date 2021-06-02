@@ -10,7 +10,6 @@ import android.net.Uri
  *  * Track
  */
 abstract class MediaDescriptor(
-    extractorCode: String,
     val id: String,
     val endpoint: String,
     val name: String,
@@ -19,7 +18,7 @@ abstract class MediaDescriptor(
     val mediumThumbnail: Uri,
     val largeThumbnail: Uri,
     val uri: Uri
-) : ExtractorCodeDescriptor(extractorCode) {
+) {
 
     abstract val kind: String
 

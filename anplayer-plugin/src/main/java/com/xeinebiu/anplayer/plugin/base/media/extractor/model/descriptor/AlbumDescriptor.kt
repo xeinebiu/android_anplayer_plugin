@@ -3,7 +3,6 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor
 import android.net.Uri
 
 open class AlbumDescriptor(
-    extractorCode: String,
     id: String,
     endpoint: String,
     name: String,
@@ -14,7 +13,6 @@ open class AlbumDescriptor(
     uri: Uri,
     val author: AuthorDescriptor?
 ) : MediaDescriptor(
-    extractorCode,
     id,
     endpoint,
     name,

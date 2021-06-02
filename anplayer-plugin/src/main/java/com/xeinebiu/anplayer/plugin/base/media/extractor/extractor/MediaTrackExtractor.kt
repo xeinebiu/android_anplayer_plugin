@@ -1,54 +1,45 @@
 package com.xeinebiu.anplayer.plugin.base.media.extractor.extractor
 
-import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Comment
-import com.xeinebiu.anplayer.plugin.base.media.extractor.model.MediaStream
+import com.xeinebiu.anplayer.plugin.base.media.extractor.exception.MediaNotFoundException
+import com.xeinebiu.anplayer.plugin.base.media.extractor.exception.StreamExtractException
+import com.xeinebiu.anplayer.plugin.base.media.extractor.exception.SubtitleExtractException
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.MediaTrack
+import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Stream
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Subtitle
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaTrackDescriptor
 
 /**
  * Extractor for a single Track
  */
-abstract class MediaTrackExtractor(extractorCode: String) :
-    Extractor<MediaTrackDescriptor>(extractorCode) {
+abstract class MediaTrackExtractor : Extractor<MediaTrackDescriptor>() {
 
     /**
      * Returns a collection of streams that contains Audio Only
      */
-    abstract fun getAudioOnlyStreams(): List<MediaStream>
-
-    /**
-     * Returns first page content of comments
-     */
-    abstract fun getCommentsFirstPage(): List<Comment>
-
-    /**
-     * Returns next page content of comments
-     */
-    abstract fun getCommentsNextPage(): List<Comment>
+    @Throws(StreamExtractException::class)
+    abstract fun getAudioOnlyStreams(): List<Stream>
 
     /**
      * Returns a collection of streams that contains Audio and Video
      */
-    abstract fun getMixedStreams(): List<MediaStream>
+    @Throws(StreamExtractException::class)
+    abstract fun getMixedStreams(): List<Stream>
+
+    /**
+     * Returns a collection of streams that contains only Video without Audio
+     */
+    @Throws(StreamExtractException::class)
+    abstract fun getVideoOnlyStreams(): List<Stream>
 
     /**
      * Returns a collection of subtitles
      */
+    @Throws(SubtitleExtractException::class)
     abstract fun getSubtitles(): List<Subtitle>
 
     /**
      * Returns the Media Track
      */
+    @Throws(MediaNotFoundException::class)
     abstract fun getTrack(): MediaTrack
-
-    /**
-     * Returns a collection of streams that contains only Video without Audio
-     */
-    abstract fun getVideoOnlyStreams(): List<MediaStream>
-
-    /**
-     * Returns `true` if there is a next page available for comments, `false` otherwise
-     */
-    abstract fun hasCommentsNextPage(): Boolean
 }

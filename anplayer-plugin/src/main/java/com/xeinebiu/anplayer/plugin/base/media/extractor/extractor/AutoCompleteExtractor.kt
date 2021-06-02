@@ -3,9 +3,10 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.extractor
 /**
  * Extractor to handle queries
  */
-abstract class AutoCompleteExtractor(extractorCode: String) : Extractor<String>(extractorCode) {
+abstract class AutoCompleteExtractor : Extractor<String>() {
+
     /**
-     * Returns current query
+     * Returns the current query
      */
     abstract fun getQuery(): String?
 }

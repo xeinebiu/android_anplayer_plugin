@@ -4,7 +4,6 @@ import android.net.Uri
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AuthorDescriptor
 
 class Author(
-    extractorCode: String,
     id: String,
     endpoint: String,
     name: String,
@@ -16,7 +15,6 @@ class Author(
     val bannerThumbnails: List<Uri>,
     val keywords: List<String>
 ) : AuthorDescriptor(
-    extractorCode,
     id,
     endpoint,
     name,

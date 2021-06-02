@@ -8,6 +8,7 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Album
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Author
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.Category
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.MediaTrack
+import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AuthorDescriptor
 import java.io.File
 import java.net.CookieManager
 
@@ -17,14 +18,22 @@ import java.net.CookieManager
  * Provides a collection (set) of extractors
  */
 abstract class MediaExtractor {
+
     private var mExtractorCode = ""
     private lateinit var mTempFolder: File
+    private lateinit var mUserFeedback: (uri: Uri, code: Int) -> Unit
 
     val extractorCode: String
         get() = mExtractorCode
 
     val tempFolder: File
         get() = mTempFolder
+
+    /**
+     * Call this method whether a consent, captcha or a feedback from user must be given
+     */
+    val askUserFeedback: (uri: Uri, code: Int) -> Unit
+        get() = mUserFeedback
 
     /**
      * Initialize extractor
@@ -79,6 +88,8 @@ abstract class MediaExtractor {
      */
     @Throws(NotImplementedExtractorException::class)
     abstract fun getAutoCompleteExtractor(query: String): AutoCompleteExtractor
+
+    abstract fun getTopAuthors(): List<AuthorDescriptor>
 
     /**
      * Returns collection of available categories

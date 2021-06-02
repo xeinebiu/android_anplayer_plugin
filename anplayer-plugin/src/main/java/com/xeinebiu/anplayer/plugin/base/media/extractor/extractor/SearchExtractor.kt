@@ -5,7 +5,8 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaD
 /**
  * Extractor to handle queries
  */
-abstract class SearchExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode) {
+abstract class SearchExtractor : Extractor<MediaDescriptor>() {
+
     /**
      * Returns current query
      */

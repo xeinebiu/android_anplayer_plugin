@@ -5,4 +5,4 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaD
 /**
  * Extractor to load contents by specific category
  */
-abstract class CategoryExtractor(extractorCode: String) : Extractor<MediaDescriptor>(extractorCode)
+abstract class CategoryExtractor : Extractor<MediaDescriptor>()

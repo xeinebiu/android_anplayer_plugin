@@ -3,7 +3,6 @@ package com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor
 import android.net.Uri
 
 open class MediaTrackDescriptor(
-    extractorCode: String,
     id: String,
     endpoint: String,
     name: String,
@@ -16,7 +15,6 @@ open class MediaTrackDescriptor(
     val durationText: String,
     val isVideo: Boolean
 ) : MediaDescriptor(
-    extractorCode,
     id,
     endpoint,
     name,
