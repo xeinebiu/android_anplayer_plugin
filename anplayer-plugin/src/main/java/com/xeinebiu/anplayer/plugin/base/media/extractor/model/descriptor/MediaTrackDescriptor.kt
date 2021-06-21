@@ -4,7 +4,6 @@ import android.net.Uri
 
 open class MediaTrackDescriptor(
     id: String,
-    endpoint: String,
     name: String,
     description: String,
     smallThumbnail: Uri,
@@ -16,7 +15,6 @@ open class MediaTrackDescriptor(
     val isVideo: Boolean
 ) : MediaDescriptor(
     id,
-    endpoint,
     name,
     description,
     smallThumbnail,

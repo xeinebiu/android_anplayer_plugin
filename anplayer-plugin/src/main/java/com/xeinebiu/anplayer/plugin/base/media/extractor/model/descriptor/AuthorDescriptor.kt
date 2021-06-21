@@ -4,7 +4,6 @@ import android.net.Uri
 
 open class AuthorDescriptor(
     id: String,
-    endpoint: String,
     name: String,
     description: String,
     smallThumbnail: Uri,
@@ -13,7 +12,6 @@ open class AuthorDescriptor(
     uri: Uri
 ) : MediaDescriptor(
     id,
-    endpoint,
     name,
     description,
     smallThumbnail,

@@ -9,7 +9,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 43
-        versionName "1.25.0"
+        versionName "1.26.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -36,7 +36,7 @@ project.afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.xeinebiu'
-                version = '1.25.0'
+                version = '1.26.0'
             }
         }
     }

@@ -5,7 +5,6 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.Author
 
 class Author(
     id: String,
-    endpoint: String,
     name: String,
     description: String,
     smallThumbnail: Uri,
@@ -16,7 +15,6 @@ class Author(
     val keywords: List<String>
 ) : AuthorDescriptor(
     id,
-    endpoint,
     name,
     description,
     smallThumbnail,

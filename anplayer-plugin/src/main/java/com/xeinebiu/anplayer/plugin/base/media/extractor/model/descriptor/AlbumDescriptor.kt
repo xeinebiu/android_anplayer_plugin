@@ -4,7 +4,6 @@ import android.net.Uri
 
 open class AlbumDescriptor(
     id: String,
-    endpoint: String,
     name: String,
     description: String,
     smallThumbnail: Uri,
@@ -14,7 +13,6 @@ open class AlbumDescriptor(
     val author: AuthorDescriptor?
 ) : MediaDescriptor(
     id,
-    endpoint,
     name,
     description,
     smallThumbnail,

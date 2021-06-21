@@ -11,7 +11,6 @@ import android.net.Uri
  */
 abstract class MediaDescriptor(
     val id: String,
-    val endpoint: String,
     val name: String,
     val description: String,
     val smallThumbnail: Uri,

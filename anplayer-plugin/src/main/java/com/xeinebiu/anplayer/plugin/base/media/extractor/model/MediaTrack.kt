@@ -6,7 +6,6 @@ import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaT
 
 class MediaTrack(
     id: String,
-    endpoint: String,
     name: String,
     description: String,
     smallThumbnail: Uri,
@@ -26,7 +25,6 @@ class MediaTrack(
     val thumbsUp: Int
 ) : MediaTrackDescriptor(
     id,
-    endpoint,
     name,
     description,
     smallThumbnail,
