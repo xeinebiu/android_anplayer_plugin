@@ -12,7 +12,7 @@ class Album(
     mediumThumbnail: Uri,
     largeThumbnail: Uri,
     uri: Uri,
-    authorDescriptor: AuthorDescriptor?,
+    author: AuthorDescriptor?,
     val tracksCount: Int
 ) : AlbumDescriptor(
     id,
@@ -22,7 +22,7 @@ class Album(
     mediumThumbnail,
     largeThumbnail,
     uri,
-    authorDescriptor
+    author
 ) {
     override val kind: String
         get() = Album::class.java.simpleName
