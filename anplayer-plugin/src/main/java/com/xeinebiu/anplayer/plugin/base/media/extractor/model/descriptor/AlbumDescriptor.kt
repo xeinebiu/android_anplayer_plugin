@@ -6,18 +6,14 @@ open class AlbumDescriptor(
     id: String,
     name: String,
     description: String,
-    smallThumbnail: Uri,
-    mediumThumbnail: Uri,
-    largeThumbnail: Uri,
+    thumbnail: Thumbnail,
     uri: Uri,
     val author: AuthorDescriptor?
 ) : MediaDescriptor(
     id,
     name,
     description,
-    smallThumbnail,
-    mediumThumbnail,
-    largeThumbnail,
+    thumbnail,
     uri
 ) {
     override val kind: String

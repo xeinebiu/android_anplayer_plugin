@@ -6,17 +6,13 @@ open class AuthorDescriptor(
     id: String,
     name: String,
     description: String,
-    smallThumbnail: Uri,
-    mediumThumbnail: Uri,
-    largeThumbnail: Uri,
+    thumbnail: Thumbnail,
     uri: Uri
 ) : MediaDescriptor(
     id,
     name,
     description,
-    smallThumbnail,
-    mediumThumbnail,
-    largeThumbnail,
+    thumbnail,
     uri
 ) {
     override val kind: String

@@ -7,19 +7,14 @@ class Author(
     id: String,
     name: String,
     description: String,
-    smallThumbnail: Uri,
-    mediumThumbnail: Uri,
-    largeThumbnail: Uri,
+    thumbnail: Thumbnail,
     uri: Uri,
-    val bannerThumbnails: List<Uri>,
     val keywords: List<String>
 ) : AuthorDescriptor(
     id,
     name,
     description,
-    smallThumbnail,
-    mediumThumbnail,
-    largeThumbnail,
+    thumbnail,
     uri
 ) {
     override val kind: String

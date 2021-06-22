@@ -4,13 +4,11 @@ import android.net.Uri
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.AuthorDescriptor
 import com.xeinebiu.anplayer.plugin.base.media.extractor.model.descriptor.MediaTrackDescriptor
 
-class MediaTrack(
+open class MediaTrack(
     id: String,
     name: String,
     description: String,
-    smallThumbnail: Uri,
-    mediumThumbnail: Uri,
-    largeThumbnail: Uri,
+    thumbnail: Thumbnail,
     uri: Uri,
     author: AuthorDescriptor?,
     durationText: String,
@@ -27,9 +25,7 @@ class MediaTrack(
     id,
     name,
     description,
-    smallThumbnail,
-    mediumThumbnail,
-    largeThumbnail,
+    thumbnail,
     uri,
     author,
     durationText,

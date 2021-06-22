@@ -8,9 +8,7 @@ class Album(
     id: String,
     name: String,
     description: String,
-    smallThumbnail: Uri,
-    mediumThumbnail: Uri,
-    largeThumbnail: Uri,
+    thumbnail: Thumbnail,
     uri: Uri,
     author: AuthorDescriptor?,
     val tracksCount: Int
@@ -18,9 +16,7 @@ class Album(
     id,
     name,
     description,
-    smallThumbnail,
-    mediumThumbnail,
-    largeThumbnail,
+    thumbnail,
     uri,
     author
 ) {

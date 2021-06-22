@@ -4,7 +4,7 @@ import android.net.Uri
 import com.xeinebiu.anplayer.plugin.base.media.extractor.enum.MediaFormat
 import java.util.*
 
-class Subtitle(
+open class Subtitle(
     val displayLanguageName: String,
     val extension: String,
     val format: MediaFormat,
