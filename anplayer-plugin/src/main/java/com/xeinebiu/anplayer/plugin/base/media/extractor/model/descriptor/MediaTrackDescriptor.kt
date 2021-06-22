@@ -6,9 +6,7 @@ open class MediaTrackDescriptor(
     id: String,
     name: String,
     description: String,
-    smallThumbnail: Uri,
-    mediumThumbnail: Uri,
-    largeThumbnail: Uri,
+    thumbnail: Thumbnail,
     uri: Uri,
     val author: AuthorDescriptor?,
     val durationText: String,
@@ -17,9 +15,7 @@ open class MediaTrackDescriptor(
     id,
     name,
     description,
-    smallThumbnail,
-    mediumThumbnail,
-    largeThumbnail,
+    thumbnail,
     uri
 ) {
     override val kind: String

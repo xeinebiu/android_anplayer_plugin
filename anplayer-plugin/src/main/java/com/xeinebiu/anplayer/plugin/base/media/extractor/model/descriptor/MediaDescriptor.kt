@@ -13,9 +13,7 @@ abstract class MediaDescriptor(
     val id: String,
     val name: String,
     val description: String,
-    val smallThumbnail: Uri,
-    val mediumThumbnail: Uri,
-    val largeThumbnail: Uri,
+    val thumbnail: Thumbnail,
     val uri: Uri
 ) {
 
@@ -34,4 +32,10 @@ abstract class MediaDescriptor(
         if (id != that.id) return false
         return uri == that.uri
     }
+
+    data class Thumbnail(
+        val smallThumbnail: Uri,
+        val mediumThumbnail: Uri,
+        val largeThumbnail: Uri
+    )
 }

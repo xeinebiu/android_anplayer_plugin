@@ -19,12 +19,9 @@ import java.net.CookieManager
  */
 abstract class MediaExtractor {
 
-    private var mExtractorCode = ""
     private lateinit var mTempFolder: File
-    private lateinit var mUserFeedback: (uri: Uri, code: Int) -> Unit
 
-    val extractorCode: String
-        get() = mExtractorCode
+    private lateinit var mUserFeedback: (uri: Uri, code: Int) -> Unit
 
     val tempFolder: File
         get() = mTempFolder
