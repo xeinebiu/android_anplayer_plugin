@@ -6,15 +6,15 @@ open class AlbumDescriptor(
     id: String,
     name: String,
     description: String,
-    thumbnail: Thumbnail,
     uri: Uri,
-    val author: AuthorDescriptor?
+    thumbnail: Thumbnail? = null,
+    val author: AuthorDescriptor? = null
 ) : MediaDescriptor(
-    id,
-    name,
-    description,
-    thumbnail,
-    uri
+    id = id,
+    name = name,
+    description = description,
+    uri = uri,
+    thumbnail = thumbnail
 ) {
     override val kind: String
         get() = AlbumDescriptor::class.java.simpleName

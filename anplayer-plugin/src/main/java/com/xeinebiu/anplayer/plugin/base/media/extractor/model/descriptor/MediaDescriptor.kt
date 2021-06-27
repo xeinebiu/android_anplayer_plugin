@@ -9,12 +9,12 @@ import android.net.Uri
  *  * Author
  *  * Track
  */
-abstract class MediaDescriptor(
+abstract class MediaDescriptor internal constructor(
     val id: String,
     val name: String,
     val description: String,
-    val thumbnail: Thumbnail,
-    val uri: Uri
+    val uri: Uri,
+    val thumbnail: Thumbnail? = null
 ) {
 
     abstract val kind: String
@@ -34,8 +34,8 @@ abstract class MediaDescriptor(
     }
 
     data class Thumbnail(
-        val smallThumbnail: Uri,
-        val mediumThumbnail: Uri,
-        val largeThumbnail: Uri
+        val smallThumbnail: Uri? = null,
+        val mediumThumbnail: Uri? = null,
+        val largeThumbnail: Uri? = null
     )
 }

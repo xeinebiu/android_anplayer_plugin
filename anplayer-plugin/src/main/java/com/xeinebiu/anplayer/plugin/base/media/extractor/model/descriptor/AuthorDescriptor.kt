@@ -6,14 +6,14 @@ open class AuthorDescriptor(
     id: String,
     name: String,
     description: String,
-    thumbnail: Thumbnail,
-    uri: Uri
+    uri: Uri,
+    thumbnail: Thumbnail? = null
 ) : MediaDescriptor(
-    id,
-    name,
-    description,
-    thumbnail,
-    uri
+    id = id,
+    name = name,
+    description = description,
+    uri = uri,
+    thumbnail = thumbnail
 ) {
     override val kind: String
         get() = AuthorDescriptor::class.java.simpleName

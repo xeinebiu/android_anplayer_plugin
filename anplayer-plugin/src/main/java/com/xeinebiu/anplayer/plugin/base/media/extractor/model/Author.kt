@@ -7,15 +7,15 @@ class Author(
     id: String,
     name: String,
     description: String,
-    thumbnail: Thumbnail,
     uri: Uri,
-    val keywords: List<String>
+    thumbnail: Thumbnail? = null,
+    val keywords: List<String>? = null
 ) : AuthorDescriptor(
-    id,
-    name,
-    description,
-    thumbnail,
-    uri
+    id = id,
+    name = name,
+    description = description,
+    uri = uri,
+    thumbnail = thumbnail,
 ) {
     override val kind: String
         get() = Author::class.java.simpleName

@@ -6,17 +6,17 @@ open class MediaTrackDescriptor(
     id: String,
     name: String,
     description: String,
-    thumbnail: Thumbnail,
     uri: Uri,
-    val author: AuthorDescriptor?,
-    val durationText: String,
-    val isVideo: Boolean
+    thumbnail: Thumbnail? = null,
+    val duration: Long? = null,
+    val isVideo: Boolean? = null,
+    val author: AuthorDescriptor? = null
 ) : MediaDescriptor(
-    id,
-    name,
-    description,
-    thumbnail,
-    uri
+    id = id,
+    name = name,
+    description = description,
+    uri = uri,
+    thumbnail = thumbnail
 ) {
     override val kind: String
         get() = MediaTrackDescriptor::class.java.simpleName

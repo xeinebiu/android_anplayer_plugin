@@ -8,28 +8,27 @@ open class MediaTrack(
     id: String,
     name: String,
     description: String,
-    thumbnail: Thumbnail,
     uri: Uri,
-    author: AuthorDescriptor?,
-    durationText: String,
-    isVideo: Boolean,
-    val genre: String,
-    val keywords: List<String>,
-    val publishedDate: String,
-    val duration: Long,
-    val views: Long,
-    val averageRating: Float,
-    val thumbsDown: Int,
-    val thumbsUp: Int
+    thumbnail: Thumbnail? = null,
+    duration: Long? = null,
+    isVideo: Boolean? = null,
+    author: AuthorDescriptor? = null,
+    val genre: String? = null,
+    val publishedDate: String? = null,
+    val views: Long? = null,
+    val averageRating: Float? = null,
+    val thumbsDown: Int? = null,
+    val thumbsUp: Int? = null,
+    val keywords: List<String>? = null
 ) : MediaTrackDescriptor(
-    id,
-    name,
-    description,
-    thumbnail,
-    uri,
-    author,
-    durationText,
-    isVideo
+    id = id,
+    name = name,
+    description = description,
+    uri = uri,
+    thumbnail = thumbnail,
+    duration = duration,
+    isVideo = isVideo,
+    author = author
 ) {
     override val kind: String
         get() = MediaTrack::class.java.simpleName

@@ -8,17 +8,17 @@ class Album(
     id: String,
     name: String,
     description: String,
-    thumbnail: Thumbnail,
     uri: Uri,
-    author: AuthorDescriptor?,
-    val tracksCount: Int
+    thumbnail: Thumbnail? = null,
+    author: AuthorDescriptor? = null,
+    val tracksCount: Int? = null
 ) : AlbumDescriptor(
-    id,
-    name,
-    description,
-    thumbnail,
-    uri,
-    author
+    id = id,
+    name = name,
+    description = description,
+    uri = uri,
+    thumbnail = thumbnail,
+    author = author
 ) {
     override val kind: String
         get() = Album::class.java.simpleName

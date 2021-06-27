@@ -4,5 +4,5 @@ import android.net.Uri
 
 open class Stream(
     val uri: Uri,
-    val headers: Map<String, String>?
+    val headers: Map<String, String>? = null
 )
