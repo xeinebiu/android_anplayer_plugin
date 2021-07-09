@@ -14,7 +14,4 @@ open class AuthorDescriptor(
     description = description,
     uri = uri,
     thumbnail = thumbnail
-) {
-    override val kind: String
-        get() = AuthorDescriptor::class.java.simpleName
-}
+)

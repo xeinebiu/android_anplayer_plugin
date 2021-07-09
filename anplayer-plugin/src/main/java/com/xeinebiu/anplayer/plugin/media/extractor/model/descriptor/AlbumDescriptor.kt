@@ -15,7 +15,4 @@ open class AlbumDescriptor(
     description = description,
     uri = uri,
     thumbnail = thumbnail
-) {
-    override val kind: String
-        get() = AlbumDescriptor::class.java.simpleName
-}
+)

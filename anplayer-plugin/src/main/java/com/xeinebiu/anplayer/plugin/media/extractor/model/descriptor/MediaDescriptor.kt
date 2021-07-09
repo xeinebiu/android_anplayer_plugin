@@ -9,7 +9,7 @@ import android.net.Uri
  *  * Author
  *  * Track
  */
-abstract class MediaDescriptor internal constructor(
+open class MediaDescriptor internal constructor(
     val id: String,
     val name: String,
     val description: String,
@@ -17,8 +17,6 @@ abstract class MediaDescriptor internal constructor(
     val thumbnail: Thumbnail? = null
 ) {
     var extractorCode: String = ""
-
-    abstract val kind: String
 
     override fun hashCode(): Int {
         var result = id.hashCode()
@@ -33,10 +31,4 @@ abstract class MediaDescriptor internal constructor(
         if (id != that.id) return false
         return uri == that.uri
     }
-
-    data class Thumbnail(
-        val smallThumbnail: Uri? = null,
-        val mediumThumbnail: Uri? = null,
-        val largeThumbnail: Uri? = null
-    )
 }

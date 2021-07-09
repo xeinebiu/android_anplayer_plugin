@@ -2,7 +2,7 @@ package com.xeinebiu.anplayer.plugin.media.extractor.model
 
 import android.net.Uri
 import com.xeinebiu.anplayer.plugin.media.extractor.enum.MediaFormat
-import java.util.Locale
+import java.util.*
 
 open class Subtitle(
     val displayLanguageName: String,

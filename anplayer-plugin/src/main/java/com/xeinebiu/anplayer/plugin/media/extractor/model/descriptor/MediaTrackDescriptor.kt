@@ -17,7 +17,4 @@ open class MediaTrackDescriptor(
     description = description,
     uri = uri,
     thumbnail = thumbnail
-) {
-    override val kind: String
-        get() = MediaTrackDescriptor::class.java.simpleName
-}
+)

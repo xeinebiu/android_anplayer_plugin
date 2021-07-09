@@ -3,6 +3,7 @@ package com.xeinebiu.anplayer.plugin.media.extractor.model
 import android.net.Uri
 import com.xeinebiu.anplayer.plugin.media.extractor.model.descriptor.AuthorDescriptor
 import com.xeinebiu.anplayer.plugin.media.extractor.model.descriptor.MediaTrackDescriptor
+import com.xeinebiu.anplayer.plugin.media.extractor.model.descriptor.Thumbnail
 
 open class MediaTrack(
     id: String,
@@ -29,7 +30,4 @@ open class MediaTrack(
     duration = duration,
     isVideo = isVideo,
     author = author
-) {
-    override val kind: String
-        get() = MediaTrack::class.java.simpleName
-}
+)
