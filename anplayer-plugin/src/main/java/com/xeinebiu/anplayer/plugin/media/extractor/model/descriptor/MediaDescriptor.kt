@@ -14,7 +14,7 @@ open class MediaDescriptor constructor(
     val name: String,
     val description: String,
     val uri: Uri,
-    val thumbnail: Thumbnail? = null
+    val thumbnail: Thumbnail?
 ) {
     var extractorCode: String = ""
 

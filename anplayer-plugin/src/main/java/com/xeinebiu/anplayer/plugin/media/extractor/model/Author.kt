@@ -9,8 +9,8 @@ open class Author(
     name: String,
     description: String,
     uri: Uri,
-    thumbnail: Thumbnail? = null,
-    val keywords: List<String>? = null
+    thumbnail: Thumbnail?,
+    val keywords: List<String>?
 ) : AuthorDescriptor(
     id = id,
     name = name,

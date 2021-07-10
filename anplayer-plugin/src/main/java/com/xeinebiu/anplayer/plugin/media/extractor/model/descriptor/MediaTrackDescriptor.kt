@@ -7,10 +7,10 @@ open class MediaTrackDescriptor(
     name: String,
     description: String,
     uri: Uri,
-    thumbnail: Thumbnail? = null,
-    val duration: Long? = null,
-    val isVideo: Boolean? = null,
-    val author: AuthorDescriptor? = null
+    thumbnail: Thumbnail?,
+    val duration: Long?,
+    val isVideo: Boolean?,
+    val author: AuthorDescriptor?
 ) : MediaDescriptor(
     id = id,
     name = name,

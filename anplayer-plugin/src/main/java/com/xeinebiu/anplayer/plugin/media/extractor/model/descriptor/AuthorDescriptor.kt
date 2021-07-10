@@ -7,7 +7,7 @@ open class AuthorDescriptor(
     name: String,
     description: String,
     uri: Uri,
-    thumbnail: Thumbnail? = null
+    thumbnail: Thumbnail?
 ) : MediaDescriptor(
     id = id,
     name = name,

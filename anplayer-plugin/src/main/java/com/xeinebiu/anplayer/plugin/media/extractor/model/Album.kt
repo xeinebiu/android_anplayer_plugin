@@ -10,9 +10,9 @@ open class Album(
     name: String,
     description: String,
     uri: Uri,
-    thumbnail: Thumbnail? = null,
-    author: AuthorDescriptor? = null,
-    val tracksCount: Int? = null
+    thumbnail: Thumbnail?,
+    author: AuthorDescriptor?,
+    val tracksCount: Int?
 ) : AlbumDescriptor(
     id = id,
     name = name,

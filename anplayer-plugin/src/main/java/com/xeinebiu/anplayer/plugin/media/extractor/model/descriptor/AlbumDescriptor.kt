@@ -7,8 +7,8 @@ open class AlbumDescriptor(
     name: String,
     description: String,
     uri: Uri,
-    thumbnail: Thumbnail? = null,
-    val author: AuthorDescriptor? = null
+    thumbnail: Thumbnail?,
+    val author: AuthorDescriptor?
 ) : MediaDescriptor(
     id = id,
     name = name,
