@@ -9,7 +9,7 @@ import android.net.Uri
  *  * Author
  *  * Track
  */
-open class MediaDescriptor internal constructor(
+open class MediaDescriptor constructor(
     val id: String,
     val name: String,
     val description: String,
