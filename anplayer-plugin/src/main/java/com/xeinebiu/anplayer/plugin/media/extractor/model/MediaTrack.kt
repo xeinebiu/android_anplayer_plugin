@@ -17,7 +17,6 @@ open class MediaTrack(
     val genre: String?,
     val publishedDate: String?,
     val views: Long?,
-    val averageRating: Float?,
     val thumbsDown: Int?,
     val thumbsUp: Int?,
     val keywords: List<String>?
