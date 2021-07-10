@@ -6,6 +6,6 @@ open class Comment(
     val id: String,
     val publishedTime: String,
     val text: String,
-    val thumbsUp: Int,
+    val thumbsUp: Long,
     val author: AuthorDescriptor?
 )

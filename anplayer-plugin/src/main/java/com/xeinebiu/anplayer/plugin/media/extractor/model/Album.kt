@@ -12,7 +12,7 @@ open class Album(
     uri: Uri,
     thumbnail: Thumbnail?,
     author: AuthorDescriptor?,
-    val tracksCount: Int?
+    val tracksCount: Long?
 ) : AlbumDescriptor(
     id = id,
     name = name,

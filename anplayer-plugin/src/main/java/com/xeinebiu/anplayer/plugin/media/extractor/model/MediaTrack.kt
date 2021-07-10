@@ -17,8 +17,8 @@ open class MediaTrack(
     val genre: String?,
     val publishedDate: String?,
     val views: Long?,
-    val thumbsDown: Int?,
-    val thumbsUp: Int?,
+    val thumbsDown: Long?,
+    val thumbsUp: Long?,
     val keywords: List<String>?
 ) : MediaTrackDescriptor(
     id = id,
