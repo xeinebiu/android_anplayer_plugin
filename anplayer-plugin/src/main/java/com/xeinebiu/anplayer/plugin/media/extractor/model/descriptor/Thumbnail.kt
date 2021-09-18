@@ -6,4 +6,4 @@ open class Thumbnail(
     val smallThumbnail: Uri?,
     val mediumThumbnail: Uri?,
     val largeThumbnail: Uri?
-)
+) : ExtractorContent()

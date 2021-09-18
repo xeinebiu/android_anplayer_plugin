@@ -15,8 +15,7 @@ open class MediaDescriptor constructor(
     val description: String,
     val uri: Uri,
     val thumbnail: Thumbnail?
-) {
-    var extractorCode: String = ""
+) : ExtractorContent() {
 
     override fun hashCode(): Int {
         var result = id.hashCode()
