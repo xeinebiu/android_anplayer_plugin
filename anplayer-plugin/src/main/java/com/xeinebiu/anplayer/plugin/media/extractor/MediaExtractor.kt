@@ -28,16 +28,8 @@ abstract class MediaExtractor {
 
     private lateinit var mTempFolder: File
 
-    private lateinit var mUserFeedback: (uri: Uri, code: Int) -> Unit
-
     val tempFolder: File
         get() = mTempFolder
-
-    /**
-     * Call this method whether a consent, captcha or a feedback from user must be given
-     */
-    val askUserFeedback: (uri: Uri, code: Int) -> Unit
-        get() = mUserFeedback
 
     /**
      * Initialize extractor
