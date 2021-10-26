@@ -7,12 +7,16 @@ import android.net.Uri
  *
  * @param uri - The uri to open in browser
  * @param userAgent - User agent to set in browser
- * @param isResolved - Validate if issue is resolved
  * @param cause - The exception if any
  */
-class UserInputNeededException(
+abstract class UserInputNeededException(
     val uri: Uri,
     val userAgent: String,
-    val isResolved: (html: String) -> Boolean,
     cause: Throwable?
-) : MediaExtractorException(uri.toString(), cause)
+) : MediaExtractorException(uri.toString(), cause) {
+
+    /**
+     * Validate if the issue is resolved from current [html] state
+     */
+    abstract fun isResolved(html: String): Boolean
+}
