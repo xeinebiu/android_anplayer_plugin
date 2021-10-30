@@ -17,7 +17,6 @@ import com.xeinebiu.anplayer.plugin.media.extractor.model.Category
 import com.xeinebiu.anplayer.plugin.media.extractor.model.MediaTrack
 import com.xeinebiu.anplayer.plugin.media.extractor.model.descriptor.AuthorDescriptor
 import java.io.File
-import java.net.CookieManager
 
 /**
  * Base extractor for extracting media contents from different sources
@@ -38,8 +37,13 @@ abstract class MediaExtractor {
 
     /**
      * Initialize extractor
+     *
+     * Use the [headers] on network requests
      */
-    abstract fun init(cookieManager: CookieManager?, data: Map<String, String>?)
+    abstract fun init(
+        headers: Map<String, String>?,
+        data: Map<String, String>?
+    )
 
     /**
      * Returns an instance of [AccountExtractor] if the client is authenticated,
