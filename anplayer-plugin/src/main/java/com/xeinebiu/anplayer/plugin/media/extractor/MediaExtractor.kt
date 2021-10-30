@@ -131,12 +131,12 @@ abstract class MediaExtractor {
     abstract fun isAuthor(uri: Uri): Boolean
 
     /**
-     * Add the [cookieString] for [uri]
+     * Add the [cookieString] for [authority]
      *
      * The [cookieString] is used to verify the HTTPS Connections on the [Uri] domain
      */
     class ResolveCookie(
-        val uri: Uri,
+        val authority: String,
         val cookieString: String
     )
 }
