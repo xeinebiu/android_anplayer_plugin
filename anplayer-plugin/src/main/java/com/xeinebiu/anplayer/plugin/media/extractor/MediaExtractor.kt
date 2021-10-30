@@ -32,6 +32,11 @@ abstract class MediaExtractor {
         get() = mTempFolder
 
     /**
+     * User agent set for HTTPS Connections
+     */
+    abstract val userAgent: String
+
+    /**
      * Initialize extractor
      */
     abstract fun init(cookieManager: CookieManager?, data: Map<String, String>?)
@@ -85,6 +90,9 @@ abstract class MediaExtractor {
     @Throws(NotImplementedExtractorException::class)
     abstract fun getAutoCompleteExtractor(query: String): AutoCompleteExtractor
 
+    /**
+     * Return popular authors
+     */
     abstract fun getTopAuthors(): List<AuthorDescriptor>
 
     /**
