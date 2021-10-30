@@ -46,6 +46,16 @@ abstract class MediaExtractor {
     )
 
     /**
+     * Add the [cookieString] for [uri]
+     *
+     * The [cookieString] is used to verify the HTTPS Connections on the [Uri] domain
+     */
+    abstract fun addResolveCookies(
+        uri: Uri,
+        cookieString: String
+    )
+
+    /**
      * Returns an instance of [AccountExtractor] if the client is authenticated,
      * [NotAuthenticatedServiceException] is thrown otherwise
      */
