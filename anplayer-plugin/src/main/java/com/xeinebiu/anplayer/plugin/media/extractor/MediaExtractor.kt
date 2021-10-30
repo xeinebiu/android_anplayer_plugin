@@ -26,9 +26,20 @@ import java.io.File
 abstract class MediaExtractor {
 
     private lateinit var mTempFolder: File
-
     val tempFolder: File
         get() = mTempFolder
+
+    private var mAuthentication: Map<String, String>? = null
+    val authentication: Map<String, String>?
+        get() = mAuthentication
+
+    private var mDataConfig: Map<String, String>? = null
+    val dataConfig: Map<String, String>?
+        get() = mDataConfig
+
+    private lateinit var mIssueResolveCookies: List<ResolveCookie>
+    val issueResolveCookies: List<ResolveCookie>
+        get() = mIssueResolveCookies
 
     /**
      * User agent set for HTTPS Connections
@@ -36,24 +47,9 @@ abstract class MediaExtractor {
     abstract val userAgent: String
 
     /**
-     * Initialize extractor
-     *
-     * Use the [headers] on network requests
+     * Called n [MediaTrackExtractor] creation
      */
-    abstract fun init(
-        headers: Map<String, String>?,
-        data: Map<String, String>?
-    )
-
-    /**
-     * Add the [cookieString] for [uri]
-     *
-     * The [cookieString] is used to verify the HTTPS Connections on the [Uri] domain
-     */
-    abstract fun addResolveCookies(
-        uri: Uri,
-        cookieString: String
-    )
+    abstract fun onCreate()
 
     /**
      * Returns an instance of [AccountExtractor] if the client is authenticated,
@@ -133,4 +129,14 @@ abstract class MediaExtractor {
      * Returns `true` if the given [uri] is an [Author], `false` otherwise
      */
     abstract fun isAuthor(uri: Uri): Boolean
+
+    /**
+     * Add the [cookieString] for [uri]
+     *
+     * The [cookieString] is used to verify the HTTPS Connections on the [Uri] domain
+     */
+    class ResolveCookie(
+        val uri: Uri,
+        val cookieString: String
+    )
 }
