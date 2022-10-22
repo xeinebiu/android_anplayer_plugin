@@ -37,9 +37,7 @@ abstract class MediaExtractor {
     val dataConfig: Map<String, String>?
         get() = mDataConfig
 
-    private lateinit var mIssueResolveCookies: List<AuthorityCookie>
-    val issueResolveCookies: List<AuthorityCookie>
-        get() = mIssueResolveCookies
+    abstract val authorityCookies: List<AuthorityCookie>
 
     /**
      * User agent set for HTTPS Connections
