@@ -37,8 +37,8 @@ abstract class MediaExtractor {
     val dataConfig: Map<String, String>?
         get() = mDataConfig
 
-    private lateinit var mIssueResolveCookies: List<ResolveCookie>
-    val issueResolveCookies: List<ResolveCookie>
+    private lateinit var mIssueResolveCookies: List<AuthorityCookie>
+    val issueResolveCookies: List<AuthorityCookie>
         get() = mIssueResolveCookies
 
     /**
@@ -129,14 +129,4 @@ abstract class MediaExtractor {
      * Returns `true` if the given [uri] is an [Author], `false` otherwise
      */
     abstract fun isAuthor(uri: Uri): Boolean
-
-    /**
-     * Add the [cookieString] for [authority]
-     *
-     * The [cookieString] is used to verify the HTTPS Connections on the [Uri] domain
-     */
-    class ResolveCookie(
-        val authority: String,
-        val cookieString: String
-    )
 }

@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 66
-        versionName "1.60.0"
+        versionCode 67
+        versionName "1.61.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -35,7 +35,7 @@ project.afterEvaluate {
                 from components.release
 
                 groupId = 'com.github.xeinebiu'
-                version = '1.60.0'
+                version = '1.61.0'
             }
         }
     }
