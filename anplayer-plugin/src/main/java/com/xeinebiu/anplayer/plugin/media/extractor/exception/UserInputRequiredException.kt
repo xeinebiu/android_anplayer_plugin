@@ -1,7 +1,6 @@
 package com.xeinebiu.anplayer.plugin.media.extractor.exception
 
 import android.net.Uri
-import com.xeinebiu.anplayer.plugin.media.extractor.AuthorityCookie
 
 /**
  * Exception to throw when a Captcha or any user feedback is required
@@ -10,7 +9,7 @@ import com.xeinebiu.anplayer.plugin.media.extractor.AuthorityCookie
  * @param userAgent - User agent to set in browser
  * @param cause - The exception if any
  */
-abstract class UserInputNeededException(
+abstract class UserInputRequiredException(
     val uri: Uri,
     val userAgent: String,
     cause: Throwable?
@@ -24,5 +23,5 @@ abstract class UserInputNeededException(
     /**
      * Cookies returned after resolve
      */
-    abstract fun resolved(authorityCookie: AuthorityCookie)
+    abstract fun resolved(uri: Uri, cookies: String)
 }

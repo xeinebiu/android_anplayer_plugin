@@ -37,15 +37,13 @@ abstract class MediaExtractor {
     val dataConfig: Map<String, String>?
         get() = mDataConfig
 
-    abstract val authorityCookies: List<AuthorityCookie>
-
     /**
      * User agent set for HTTPS Connections
      */
-    abstract val userAgent: String
+    abstract val userAgent: String?
 
     /**
-     * Called n [MediaTrackExtractor] creation
+     * Called after [MediaTrackExtractor] is initialised
      */
     abstract fun onCreate()
 
@@ -127,4 +125,9 @@ abstract class MediaExtractor {
      * Returns `true` if the given [uri] is an [Author], `false` otherwise
      */
     abstract fun isAuthor(uri: Uri): Boolean
+
+    /**
+     * Return the HTTP Headers for specific [uri]
+     */
+    abstract fun getHeaders(uri: Uri): Map<String, String>
 }
