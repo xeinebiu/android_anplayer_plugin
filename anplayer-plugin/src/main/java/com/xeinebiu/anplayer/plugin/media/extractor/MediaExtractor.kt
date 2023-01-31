@@ -38,11 +38,6 @@ abstract class MediaExtractor {
         get() = mDataConfig
 
     /**
-     * User agent set for HTTPS Connections
-     */
-    abstract val userAgent: String?
-
-    /**
      * Called after [MediaTrackExtractor] is initialised
      */
     abstract fun onCreate()
