@@ -6,12 +6,12 @@ import android.net.Uri
  * Exception to throw when a Captcha or any user feedback is required
  *
  * @param uri - The uri to open in browser
- * @param userAgent - User agent to set in browser
+ * @param headers - Headers agent to set in browser
  * @param cause - The exception if any
  */
 abstract class UserInputRequiredException(
     val uri: Uri,
-    val userAgent: String,
+    val headers: Map<String, String>?,
     cause: Throwable?
 ) : MediaExtractorException(uri.toString(), cause) {
 
