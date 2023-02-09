@@ -122,6 +122,11 @@ abstract class MediaExtractor {
     abstract fun isAuthor(uri: Uri): Boolean
 
     /**
+     * Returns `true` if the given [uri] is an [Category], `false` otherwise
+     */
+    abstract fun isCategory(uri: Uri): Boolean
+
+    /**
      * Return the HTTP Headers for specific [uri]
      */
     abstract fun getHeaders(uri: Uri): Map<String, String>
