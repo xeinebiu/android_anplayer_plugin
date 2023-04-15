@@ -7,3 +7,6 @@ export * from './search.extractor';
 export * from './account.extractor';
 export * from './category.extractor';
 export * from './autocomplete.extractor';
+export * from './authors.extractor';
+export * from './albums.extractor';
+export * from './categories.extractor';

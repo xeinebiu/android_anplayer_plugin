@@ -1,14 +1,16 @@
 import {
     AccountExtractor,
     AlbumExtractor,
+    AlbumsExtractor,
     AuthorExtractor,
+    AuthorsExtractor,
     AutocompleteExtractor,
+    CategoriesExtractor,
     CategoryExtractor,
     FeedExtractor,
     MediaExtractor,
     SearchExtractor,
 } from './extractor';
-import { Author, Category } from './model';
 
 export type AnPlayerExtractor = (args: {
     temporaryFolderPath: string;
@@ -18,31 +20,33 @@ export type AnPlayerExtractor = (args: {
 
     getAlbumExtractor(album: URL): Promise<AlbumExtractor>;
 
+    getAlbumsExtractor(query?: string): Promise<AlbumsExtractor>;
+
     getAuthorExtractor(author: URL): Promise<AuthorExtractor>;
 
-    getMediaExtractor(media: URL): Promise<MediaExtractor>;
-
-    getCategoryExtractor(category: URL): Promise<CategoryExtractor>;
-
-    getSearchExtractor(query: string): Promise<SearchExtractor>;
+    getAuthorsExtractor(query?: string): Promise<AuthorsExtractor>;
 
     getAutocompleteExtractor(query: string): Promise<AutocompleteExtractor>;
 
-    getCategories(): Promise<Category[]>;
+    getCategoriesExtractor(): Promise<CategoriesExtractor>;
 
-    getAuthors(): Promise<Author[]>;
+    getCategoryExtractor(category: URL): Promise<CategoryExtractor>;
 
     getFeedExtractor(): Promise<FeedExtractor>;
 
     getHeaders(uri: URL): Promise<Record<string, string>>;
 
-    isSupported(uri: URL): Promise<boolean>;
+    getMediaExtractor(media: URL): Promise<MediaExtractor>;
 
-    isMediaTrack(uri: URL): Promise<boolean>;
+    getSearchExtractor(query: string): Promise<SearchExtractor>;
 
     isAlbum(uri: URL): Promise<boolean>;
 
     isAuthor(uri: URL): Promise<boolean>;
 
     isCategory(uri: URL): Promise<boolean>;
+
+    isMediaTrack(uri: URL): Promise<boolean>;
+
+    isSupported(uri: URL): Promise<boolean>;
 };
