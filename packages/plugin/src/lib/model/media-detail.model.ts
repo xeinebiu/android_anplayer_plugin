@@ -12,12 +12,11 @@ export type MediaDetail = Readonly<{
     duration?: number;
     isVideo: boolean;
     author?: Author;
-    genre?: string;
+    genres?: string[];
     publishedDate?: Date;
     views?: number;
     likes?: number;
     dislikes?: number;
-    keywords?: string[];
     type: ContentType.mediaDetail;
 }>;
 
