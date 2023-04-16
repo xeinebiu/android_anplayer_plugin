@@ -1,5 +1,5 @@
 import { Extractor } from './extractor';
-import { Media, Subtitle } from '../model';
+import { Media, MediaDetail, Subtitle } from '../model';
 
 export type MediaExtractor = Extractor<
     Media,
@@ -12,6 +12,6 @@ export type MediaExtractor = Extractor<
 
         getSubtitles(): Promise<Subtitle[]>;
 
-        getMedia(): Promise<Media>;
+        getMedia(): Promise<MediaDetail>;
     }
 >;

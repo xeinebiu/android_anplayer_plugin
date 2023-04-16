@@ -1,4 +1,13 @@
 import { Extractor } from './extractor';
-import { Album, Author, Media } from '../model';
+import {
+    Album,
+    AlbumDetail,
+    Author,
+    AuthorDetail,
+    Media,
+    MediaDetail,
+} from '../model';
 
-export type FeedExtractor = Extractor<Author | Media | Album>;
+export type FeedExtractor = Extractor<
+    Author | Media | Album | AuthorDetail | MediaDetail | AlbumDetail
+>;

@@ -1,4 +1,4 @@
 import { Extractor } from './extractor';
-import { Album } from '../model';
+import { Album, AlbumDetail } from '../model';
 
-export type AlbumsExtractor = Extractor<Album>;
+export type AlbumsExtractor = Extractor<Album | AlbumDetail>;
