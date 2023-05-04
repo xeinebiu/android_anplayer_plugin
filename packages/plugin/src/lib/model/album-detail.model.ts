@@ -3,7 +3,6 @@ import { Author } from './author.model';
 import { ContentType } from '../enum';
 
 export type AlbumDetail = Readonly<{
-    id: string;
     name: string;
     description: string;
     uri: URL;

@@ -2,7 +2,6 @@ import { Thumbnail } from './thumbnail.model';
 import { ContentType } from '../enum';
 
 export type AuthorDetail = Readonly<{
-    id: string;
     name: string;
     description: string;
     uri: URL;

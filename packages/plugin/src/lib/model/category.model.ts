@@ -1,7 +1,6 @@
 import { ContentType } from '../enum';
 
 export type Category = Readonly<{
-    id: string;
     name: string;
     uri: URL;
     type: ContentType.category;
