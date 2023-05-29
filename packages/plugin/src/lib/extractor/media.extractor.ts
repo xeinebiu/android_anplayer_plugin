@@ -1,14 +1,14 @@
 import { Extractor } from './extractor';
-import { Media, MediaDetail, Subtitle } from '../model';
+import { Media, MediaDetail, Stream, Subtitle } from '../model';
 
 export type MediaExtractor = Extractor<
     Media,
     {
-        getAudioStream(): Promise<MediaStream[]>;
+        getAudioStream(): Promise<Stream[]>;
 
-        getVideoOnlyStream(): Promise<MediaStream[]>;
+        getVideoOnlyStream(): Promise<Stream[]>;
 
-        getMixedVideoStream(): Promise<MediaStream[]>;
+        getMixedVideoStream(): Promise<Stream[]>;
 
         getSubtitles(): Promise<Subtitle[]>;
 
