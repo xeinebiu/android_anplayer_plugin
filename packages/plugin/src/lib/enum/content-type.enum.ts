@@ -7,4 +7,6 @@ export enum ContentType {
     albumDetail = 'album_detail',
     category = 'category',
     comment = 'comment',
+    streamDirect = 'stream_direct',
+    streamDescription = 'stream_description',
 }
