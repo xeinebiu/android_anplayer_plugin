@@ -10,6 +10,7 @@ export type MediaDetail = Readonly<{
     thumbnail?: Thumbnail;
     duration?: number;
     isVideo: boolean;
+    browse: boolean;
     author?: Author;
     genres?: string[];
     publishedDate?: Date;

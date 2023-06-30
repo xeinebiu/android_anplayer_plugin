@@ -10,6 +10,7 @@ export type Media = Readonly<{
     duration?: number;
     isVideo: boolean;
     author?: Author;
+    browse: boolean;
     type: ContentType.media;
 }>;
 
