@@ -10,7 +10,7 @@ export type MediaExtractor = Extractor<
 
         getMixedVideoStream(): Promise<Stream[]>;
 
-        getDirectStream(streams: Stream[]): Promise<Stream[]>;
+        getDirectStream(stream: URL): Promise<Stream>;
 
         getSubtitles(): Promise<Subtitle[]>;
 
