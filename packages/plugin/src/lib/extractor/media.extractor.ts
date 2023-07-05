@@ -1,16 +1,20 @@
 import { Extractor } from './extractor';
-import { Media, MediaDetail, Stream, Subtitle } from '../model';
+import {
+    Media,
+    MediaDetail,
+    DirectStream,
+    StreamDescription,
+    Subtitle,
+} from '../model';
 
 export type MediaExtractor = Extractor<
     Media,
     {
-        getAudioStream(): Promise<Stream[]>;
+        getAudioStream(): Promise<(DirectStream | StreamDescription)[]>;
 
-        getVideoOnlyStream(): Promise<Stream[]>;
+        getVideoOnlyStream(): Promise<(DirectStream | StreamDescription)[]>;
 
-        getMixedVideoStream(): Promise<Stream[]>;
-
-        getDirectStream(stream: URL): Promise<Stream>;
+        getMixedVideoStream(): Promise<(DirectStream | StreamDescription)[]>;
 
         getSubtitles(): Promise<Subtitle[]>;
 

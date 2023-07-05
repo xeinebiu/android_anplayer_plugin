@@ -10,6 +10,7 @@ import {
     FeedExtractor,
     MediaExtractor,
     SearchExtractor,
+    StreamExtractor,
 } from './extractor';
 
 export type AnPlayerExtractor = (args: {
@@ -40,6 +41,8 @@ export type AnPlayerExtractor = (args: {
 
     getSearchExtractor(query: string): Promise<SearchExtractor>;
 
+    getStreamExtractor(stream: URL): Promise<StreamExtractor>;
+
     isAlbum(uri: URL): Promise<boolean>;
 
     isAuthor(uri: URL): Promise<boolean>;
@@ -47,6 +50,8 @@ export type AnPlayerExtractor = (args: {
     isCategory(uri: URL): Promise<boolean>;
 
     isMediaTrack(uri: URL): Promise<boolean>;
+
+    isStream(uri: URL): Promise<boolean>;
 
     isSupported(uri: URL): Promise<boolean>;
 };
