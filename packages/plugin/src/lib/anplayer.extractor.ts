@@ -41,7 +41,7 @@ export type AnPlayerExtractor = (args: {
 
     getSearchExtractor(query: string): Promise<SearchExtractor>;
 
-    getStreamExtractor(stream: URL): Promise<StreamExtractor>;
+    getStreamExtractor(): Promise<StreamExtractor>;
 
     isAlbum(uri: URL): Promise<boolean>;
 
