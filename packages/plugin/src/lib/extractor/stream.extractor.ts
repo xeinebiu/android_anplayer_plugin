@@ -1,7 +1,7 @@
 import { Extractor } from './extractor';
-import { DirectStream } from '../model';
+import { DirectStream, StreamDescription } from '../model';
 
 export type StreamExtractor = Extractor<
     never,
-    { getDirectStream(uri: URL): DirectStream }
+    { getStreams(uri: URL): Promise<DirectStream[] | StreamDescription[]> }
 >;
