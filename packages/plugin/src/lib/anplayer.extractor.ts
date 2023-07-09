@@ -51,7 +51,9 @@ export type AnPlayerExtractor = (args: {
 
     isMediaTrack(uri: URL): Promise<boolean>;
 
-    isStream(uri: URL): Promise<boolean>;
+    isDirectStream(uri: URL): Promise<boolean>;
+
+    isDescriptionStream(uri: URL): Promise<boolean>;
 
     isSupported(uri: URL): Promise<boolean>;
 };
