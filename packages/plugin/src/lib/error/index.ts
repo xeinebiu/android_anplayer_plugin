@@ -6,3 +6,5 @@ export * from './subtitle-parsing.error';
 export * from './not-authenticated.error';
 export * from './user-input-required.error';
 export * from './extractor-not-implemented.error';
+export * from './category-not-found.error';
+export * from './stream-description-not-found.error';
