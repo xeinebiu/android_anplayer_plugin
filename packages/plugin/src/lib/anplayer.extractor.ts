@@ -15,7 +15,7 @@ import {
 
 export type AnPlayerExtractor = (args: {
     temporaryFolderPath: string;
-    config: Record<string, string>;
+    config: string;
 }) => {
     getAccountExtractor(): Promise<AccountExtractor>;
 
