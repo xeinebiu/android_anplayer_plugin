@@ -12,10 +12,12 @@ import {
     SearchExtractor,
     StreamExtractor,
 } from './extractor';
+import { ExtractorLogger } from './logger';
 
 export type AnPlayerExtractor = (args: {
     temporaryFolderPath: string;
     config: string;
+    logger: ExtractorLogger;
 }) => {
     getAccountExtractor(): Promise<AccountExtractor>;
 
