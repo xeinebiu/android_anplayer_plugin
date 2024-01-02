@@ -1,7 +1,6 @@
-import { ThumbnailSource } from './thumbnail-source.model';
+import { ThumbnailSizes } from './thumbnail-sizes.model';
 
 export type Thumbnail = Readonly<{
-    small?: ThumbnailSource;
-    medium?: ThumbnailSource;
-    large?: ThumbnailSource;
+    portrait?: ThumbnailSizes;
+    landscape?: ThumbnailSizes;
 }>;

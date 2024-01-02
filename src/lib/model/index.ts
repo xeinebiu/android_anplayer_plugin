@@ -1,7 +1,6 @@
 export * from './album.model';
 export * from './media.model';
 export * from './author.model';
-export * from './stream-description.model';
 export * from './comment.model';
 export * from './category.model';
 export * from './subtitle.model';
@@ -9,6 +8,8 @@ export * from './thumbnail.model';
 export * from './album-detail.model';
 export * from './media-detail.model';
 export * from './author-detail.model';
-export * from './thumbnail-source.model';
 export * from './direct-stream.model';
+export * from './thumbnail-sizes.model';
+export * from './thumbnail-source.model';
 export * from './web-player-stream.model';
+export * from './stream-description.model';

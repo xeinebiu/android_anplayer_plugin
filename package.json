@@ -1,6 +1,6 @@
 {
   "name": "@xeinebiu/anplayer-plugin-core",
-  "version": "1.13.0",
+  "version": "2.14.0",
   "description": "Core plugin for AN Player.",
   "main": "dist/index.js",
   "scripts": {
@@ -23,15 +23,14 @@
   },
   "homepage": "https://github.com/xeinebiu/android_anplayer_plugin#readme",
   "dependencies": {
-
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "5.59.2",
-    "@typescript-eslint/parser": "5.59.2",
-    "eslint": "8.39.0",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "prettier": "2.8.8",
+    "@typescript-eslint/eslint-plugin": "6.17.0",
+    "@typescript-eslint/parser": "6.17.0",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.2",
+    "prettier": "3.1.1",
     "typescript": "5.3.3"
   }
 }
