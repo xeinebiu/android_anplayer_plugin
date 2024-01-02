@@ -1,6 +1,6 @@
 {
   "name": "@xeinebiu/anplayer-plugin-core",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "Core plugin for AN Player.",
   "main": "index.js",
   "scripts": {
