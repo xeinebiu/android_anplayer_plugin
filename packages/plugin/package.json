@@ -1,0 +1,6 @@
+{
+  "name": "@xeinebiu/anplayer",
+  "version": "2.10.0",
+  "files": ["src"],
+  "type": "commonjs"
+}

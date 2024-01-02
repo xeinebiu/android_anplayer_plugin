@@ -1,2 +1,0 @@
-include ':anplayer-plugin'
-rootProject.name = "Demo"
