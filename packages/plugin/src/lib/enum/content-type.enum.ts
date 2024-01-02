@@ -9,4 +9,5 @@ export enum ContentType {
     comment = 'comment',
     streamDirect = 'stream_direct',
     streamDescription = 'stream_description',
+    streamWebPlayer = 'stream_web_player',
 }
