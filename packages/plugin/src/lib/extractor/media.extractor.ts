@@ -5,16 +5,27 @@ import {
     DirectStream,
     StreamDescription,
     Subtitle,
+    WebPlayerStream,
 } from '../model';
 
 export type MediaExtractor = Extractor<
     Media,
     {
-        getAudioStream(): Promise<(DirectStream | StreamDescription)[]>;
+        getAudioStream(): Promise<
+            (DirectStream | WebPlayerStream | StreamDescription)[]
+        >;
 
-        getVideoOnlyStream(): Promise<(DirectStream | StreamDescription)[]>;
+        getVideoOnlyStream(): Promise<
+            (DirectStream | WebPlayerStream | StreamDescription)[]
+        >;
 
-        getMixedVideoStream(): Promise<(DirectStream | StreamDescription)[]>;
+        getMixedVideoStream(): Promise<
+            (DirectStream | WebPlayerStream | StreamDescription)[]
+        >;
+
+        getTrailer(): Promise<
+            DirectStream | WebPlayerStream | StreamDescription | null
+        >;
 
         getSubtitles(): Promise<Subtitle[]>;
 

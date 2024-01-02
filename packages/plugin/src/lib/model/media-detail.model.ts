@@ -6,7 +6,6 @@ export type MediaDetail = Readonly<{
     name: string;
     description: string;
     uri: URL;
-    trailer?: URL;
     thumbnail?: Thumbnail;
     duration?: number;
     isVideo: boolean;

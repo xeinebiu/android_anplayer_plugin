@@ -11,3 +11,4 @@ export * from './media-detail.model';
 export * from './author-detail.model';
 export * from './thumbnail-source.model';
 export * from './direct-stream.model';
+export * from './web-player-stream.model';
