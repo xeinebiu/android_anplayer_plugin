@@ -4,6 +4,7 @@ export type DirectStream = Readonly<{
     uri: URL;
     headers?: Record<string, string>;
     type: ContentType;
+    mimeType?: string;
 }>;
 
 export function createDirectStream(
