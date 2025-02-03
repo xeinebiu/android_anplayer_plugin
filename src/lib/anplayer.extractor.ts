@@ -61,7 +61,7 @@ export type AnPlayerExtractor = (args: {
     isSupported(uri: URL): Promise<boolean>;
 };
 
-const defaultImplementation = {
+const defaultImplementation: ReturnType<AnPlayerExtractor> = {
     getAccountExtractor: () =>
         Promise.reject(new ExtractorNotImplementedError()),
     getAlbumExtractor: () => Promise.reject(new ExtractorNotImplementedError()),
