@@ -78,7 +78,7 @@ const defaultImplementation = {
     getCategoryExtractor: () =>
         Promise.reject(new ExtractorNotImplementedError()),
     getFeedExtractor: () => Promise.reject(new ExtractorNotImplementedError()),
-    getHeaders: () => Promise.reject(new ExtractorNotImplementedError()),
+    getHeaders: () => Promise.resolve({}),
     getMediaExtractor: () => Promise.reject(new ExtractorNotImplementedError()),
     getSearchExtractor: () =>
         Promise.reject(new ExtractorNotImplementedError()),
@@ -94,7 +94,7 @@ const defaultImplementation = {
 };
 
 export function createAnPlayerExtractor(
-    partialImplementation: Partial<AnPlayerExtractor>,
+    partialImplementation: Partial<typeof defaultImplementation>,
 ): AnPlayerExtractor {
     return () => {
         const implementation = {
