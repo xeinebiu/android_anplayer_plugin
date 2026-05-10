@@ -10,7 +10,8 @@ import { DirectStream, StreamDescription, WebPlayerStream } from '../model';
  * turn it into playable streams.
  *
  * The `next()` method is never called on this extractor (`Next = never`);
- * all interaction goes through `getStreams` and `getStreamDescription`.
+ * all interaction goes through `getStreamsByUri`, `getStreamsByQuery`,
+ * and `getStreamDescription`.
  */
 export type StreamExtractor = Extractor<
     never,
@@ -24,8 +25,20 @@ export type StreamExtractor = Extractor<
          *   `WebPlayerStream` items. AN Player will pick the best variant
          *   based on user preferences and device capabilities.
          */
-        getStreams(
+        getStreamsByUri(
             uri: URL,
+        ): Promise<DirectStream[] | StreamDescription[] | WebPlayerStream[]>;
+
+        /**
+         * Searches for streams matching a text query.
+         *
+         * @param query - Free-text search string (e.g. a song title, artist
+         *   name, or video keyword).
+         * @returns An array of `DirectStream`, `StreamDescription`, or
+         *   `WebPlayerStream` items matching the query.
+         */
+        getStreamsByQuery(
+            query: string,
         ): Promise<DirectStream[] | StreamDescription[] | WebPlayerStream[]>;
 
         /**
