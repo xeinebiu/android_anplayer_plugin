@@ -12,7 +12,13 @@
  * - `warning` → recoverable unexpected situations
  * - `error` → failures that affect plugin behaviour
  */
-export type ExtractorLogger = Readonly<{
+export type ExtractorLogger = {
+    /**
+     * Shorthand for {@link debug}. Returns this logger to support the
+     * existing fluent plugin logging style.
+     */
+    (message: string): ExtractorLogger;
+
     /**
      * Logs a verbose debug message. Typically only visible in debug builds or
      * when debug logging is explicitly enabled.
@@ -20,7 +26,7 @@ export type ExtractorLogger = Readonly<{
      * @param message - Human-readable description of the event.
      * @param error   - Optional associated error for additional context.
      */
-    debug(message: string, error?: Error): void;
+    debug(message: string, error?: Error): ExtractorLogger;
 
     /**
      * Logs an informational message about normal plugin operation
@@ -29,7 +35,7 @@ export type ExtractorLogger = Readonly<{
      * @param message - Human-readable description of the event.
      * @param error   - Optional associated error for additional context.
      */
-    info(message: string, error?: Error): void;
+    info(message: string, error?: Error): ExtractorLogger;
 
     /**
      * Alias for `info`. Logs a general-purpose message.
@@ -37,7 +43,7 @@ export type ExtractorLogger = Readonly<{
      * @param message - Human-readable description of the event.
      * @param error   - Optional associated error for additional context.
      */
-    log(message: string, error?: Error): void;
+    log(message: string, error?: Error): ExtractorLogger;
 
     /**
      * Logs a warning about a recoverable unexpected situation (e.g. a
@@ -46,7 +52,7 @@ export type ExtractorLogger = Readonly<{
      * @param message - Human-readable description of the situation.
      * @param error   - Optional associated error for additional context.
      */
-    warning(message: string, error?: Error): void;
+    warning(message: string, error?: Error): ExtractorLogger;
 
     /**
      * Logs an error that has affected plugin behaviour (e.g. a failed
@@ -56,5 +62,11 @@ export type ExtractorLogger = Readonly<{
      * @param error   - Optional associated error (stack trace will be
      *   included in the log output).
      */
-    error(message: string, error?: Error): void;
-}>;
+    error(message: string, error?: Error): ExtractorLogger;
+
+    /** Logs an empty debug line and returns this logger. */
+    empty(): ExtractorLogger;
+
+    /** Returns a logger scoped under the supplied tag. */
+    with(tag: string): ExtractorLogger;
+};
